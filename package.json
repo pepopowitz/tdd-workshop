@@ -4,7 +4,10 @@
   "description": "Materials for the workshop \"Building Quality JavaScript With Test-Driven Development\", by Steven J Hicks.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest",
+    "test-watch-all": "jest --watch",
+    "test-watch-module-1": "jest --watch --config ./module-1/jest.config.js",
+    "test-watch-module-2": "jest --watch --config ./module-2/jest.config.js"
   },
   "repository": {
     "type": "git",
