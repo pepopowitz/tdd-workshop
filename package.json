@@ -4,7 +4,7 @@
   "description": "Materials for the workshop \"Building Quality JavaScript With Test-Driven Development\", by Steven J Hicks.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/pepopowitz/tdd-workshop#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
     "jest": "^22.4.3"
   }
 }
