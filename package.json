@@ -1,0 +1,28 @@
+{
+  "name": "tdd-workshop",
+  "version": "1.0.0",
+  "description": "Materials for the workshop \"Building Quality JavaScript With Test-Driven Development\", by Steven J Hicks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepopowitz/tdd-workshop.git"
+  },
+  "keywords": [
+    "TDD",
+    "JavaScript",
+    "workshop",
+    "Jest"
+  ],
+  "author": "Steven J Hicks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepopowitz/tdd-workshop/issues"
+  },
+  "homepage": "https://github.com/pepopowitz/tdd-workshop#readme",
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}
