@@ -1,6 +1,10 @@
 # tdd-workshop
 This project contains materials for my TDD workshop, "Building Quality JavaScript With Test-Driven Development."
 
+The materials are divided into 5 modules. Start by reading the [Module 0: Setup](./module-0/README.md) instructions. 
+
+If you are unable to complete [Module 0: Setup](./module-0/README.md), please raise your hand (if in-person), or create an issue according to the instructions in [Module 0: Setup](./module-0/README.md) (if not in-person). 
+
 ## Modules
 
 ### [Module 0: Setup](./module-0/README.md)
