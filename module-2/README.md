@@ -12,7 +12,7 @@ If you don't want to follow along with the group, feel free to build out FizzBuz
 
 ### How to play
 
-* Fire up the tests by opening a new command window, and running `npm run test-watch-module-1`
+* Fire up the tests by opening a new command window, and running `npm run test-watch-module-2`
 * Write tests & code to implement [the specifications](#specifications), one at a time. 
 * Make sure you write a failing test before you implement each specification!
 
