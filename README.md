@@ -5,6 +5,10 @@ The materials are divided into 5 modules. Start by reading the [Module 0: Setup]
 
 If you are unable to complete [Module 0: Setup](./module-0/README.md), please raise your hand (if in-person), or create an issue according to the instructions in [Module 0: Setup](./module-0/README.md) (if not in-person). 
 
+Once you complete [Module 0: Setup](./module-0/README.md), work through Modules 1-4.
+
+
+
 ## Modules
 
 ### [Module 0: Setup](./module-0/README.md)
