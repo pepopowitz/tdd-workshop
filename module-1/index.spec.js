@@ -1,7 +1,9 @@
-import fizzBuzz from './index';
+import fn from './index';
 
-describe('fizzBuzz', () => {
-  it('doesn`t do anything yet - you`ll need to start writing some tests!', () => {
-
-  });
+describe('module-2/index', () => {
+  it('works', () => {
+    const result = fn(1);
+    
+    expect(result).toEqual('a');
+  })
 });

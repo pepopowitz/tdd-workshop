@@ -15,11 +15,13 @@ Once you complete [Module 0: Setup](./module-0/README.md), work through Modules 
 
 ### [Module 1: Jest](./module-1/README.md)
 
-### [Module 2: TDD](./module-2/README.md)
+### [Module 2: TDD Demo](./module-2/README.md)
 
-### [Module 3: Katas](./module-3/README.md)
+### [Module 3: TDD](./module-3/README.md)
 
-### [Module 4: Real-life TDD](./module-4/README.md)
+### [Module 4: Katas](./module-4/README.md)
+
+### [Module 5: Real-life TDD](./module-5/README.md)
 
 ## Notes
 
