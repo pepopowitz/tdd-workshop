@@ -1,6 +1,6 @@
 import fn from './index';
 
-describe('module-1/index', () => {
+describe('module-3/index', () => {
   it('works', () => {
     const result = fn(1);
     
