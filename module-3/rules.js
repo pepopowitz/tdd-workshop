@@ -1,3 +1,6 @@
 export default function doStuff(){
-  cosnsole.log('yoooo');
+  const steve = {eyes: 'blue'};
+  const hicks = {...steve, hair: 'brown'};
+
+  console.log('yoooo', steve, hicks);
 }
