@@ -1,0 +1,23 @@
+body {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Helvetica Neue", Arial, sans-serif;
+}
+h1, h2, h3 {
+  text-align: center;
+}
+
+.grid {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.item {
+  background-color: gray;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.item.alive {
+  background-color: red;
+}

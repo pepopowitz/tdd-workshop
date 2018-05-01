@@ -1,6 +1,4 @@
-export default function(a){
-  if (a === 1) {
-    return 'a';
-  }
-  return 'b';
-}
+import app from './app';
+
+console.log(app());
+document.body.appendChild(app());
