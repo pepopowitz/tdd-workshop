@@ -1,4 +1,4 @@
-import app from './app';
+import App from './app';
 
-console.log(app());
-document.body.appendChild(app());
+console.log(App());
+document.body.appendChild(App());

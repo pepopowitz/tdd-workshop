@@ -6,8 +6,11 @@ h1, h2, h3 {
 }
 
 .grid {
-  display: flex;
   width: 100%;
+}
+
+.row {
+  display: flex;
   justify-content: center;
 }
 
