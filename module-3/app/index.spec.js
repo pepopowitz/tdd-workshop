@@ -1,36 +1,47 @@
-import app from './index';
+import App from './index';
 
-import getNextState from '../get-next-state';
 import looksLike from '../test.looksLike';
 
 expect.extend({
   toLookLike: looksLike,
 });
 
-jest.mock('../get-next-state');
-
 describe('app/index.js', () => {
-  beforeEach(() => {
-    getNextState.mockClear();
-  });
-
   it('draws the shell', () => {
-    getNextState.mockReturnValue([[1, 0, 1, 0, 1]]);
+    const lifeState = [[1, 0, 1, 0, 1]];
 
-    const result = app();
+    const result = App({lifeState});
 
     expect(result.outerHTML).toLookLike(
       `<div>
         <h1>Conway's Game Of Life</h1>
+        <div class="actions">{{}}</div>
         <div class="grid">{{}}</div>
       </div>`
     );
   });
 
-  it('draws a row of items', () => {
-    getNextState.mockReturnValue([[1, 0, 1, 0, 1]]);
+  it('draws the actions', () => {
+    const lifeState = [[1, 0, 1, 0, 1]];
 
-    const result = app();
+    const result = App({lifeState});
+
+    expect(result.outerHTML).toLookLike(
+      `<div>
+        {{}}
+        <div class="actions">
+          <button type="button">Start</button>
+          <button type="button">Stop</button>
+        </div>
+        {{}}
+      </div>`
+    )
+  });
+
+  it('draws a row of items', () => {
+    const lifeState = [[1, 0, 1, 0, 1]];
+
+    const result = App({lifeState});
 
     expect(result.outerHTML).toLookLike(
       `<div>
@@ -49,9 +60,9 @@ describe('app/index.js', () => {
   });
 
   it('draws multiple rows of items', () => {
-    getNextState.mockReturnValue([[1, 0, 1], [0, 1, 0]]);
+    const lifeState = [[1, 0, 1], [0, 1, 0]];
 
-    const result = app();
+    const result = App({lifeState});
 
     expect(result.outerHTML).toLookLike(
       `<div>

@@ -5,6 +5,15 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.actions {
+  display:flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.actions button {
+  margin: 0 0.5rem;
+}
+
 .grid {
   width: 100%;
 }
@@ -15,12 +24,12 @@ h1, h2, h3 {
 }
 
 .item {
-  background-color: gray;
+  background-color: #eee;
   width: 25px;
   height: 25px;
   margin: 5px;
 }
 
 .item.alive {
-  background-color: red;
+  background-color: #228e13;
 }
