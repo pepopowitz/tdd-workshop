@@ -2,14 +2,14 @@ import App from './app';
 import getNextState from './get-next-state';
 
 // initial render
-let lifeState = getNextState();
+let lifeState = getInitialState();
 
 let rendered = App({lifeState, startGame, stopGame});
 document.body.appendChild(rendered);
 
 // interval render
 function render(){
-  const lifeState = getNextState();
+  lifeState = getNextState(lifeState);
   const replacement = App({lifeState, startGame, stopGame});
   document.body.replaceChild(replacement, rendered);
   rendered = replacement;
@@ -28,3 +28,52 @@ function stopGame() {
   window.clearInterval(interval);
 }
 
+function getInitialState() {
+  return [
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+    dummyRow(),
+  ];
+}
+
+function dummyRow() {
+  return [
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+    _.random(0, 1),
+  ];
+}
