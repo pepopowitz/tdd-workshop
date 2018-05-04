@@ -2,6 +2,8 @@ module.exports = {
   displayName: 'module-3',
   modulePaths: ['<rootDir>'],
   modulePathIgnorePatterns: ['<rootDir>/dist'],
+  testPathIgnorePatterns: ['../node_modules', '../.git'],
+  transformIgnorePatterns: ['../node_modules', '../.git'],
   roots: ['<rootDir>'],
   // setupTestFrameworkScriptFile: '<rootDir>/test.setup.js',
   moduleNameMapper: {
