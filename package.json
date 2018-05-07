@@ -6,13 +6,13 @@
   "scripts": {
     "test": "jest",
     "test-watch-all": "jest --watch",
-    "test-module-1": "jest --watch --config ./module-1/jest.config.js",
-    "test-module-2": "jest --watch --config ./module-2/jest.config.js",
-    "test-module-3": "jest --watch --config ./module-3/jest.config.js",
+    "test-module-1": "jest --watch -i --config ./module-1/jest.config.js",
+    "test-module-2": "jest --watch -i --config ./module-2/jest.config.js",
+    "test-module-3": "jest --watch -i --config ./module-3/jest.config.js",
     "build-module-3": "webpack --config ./module-3/webpack.config.js",
     "serve-module-3": "webpack-dev-server --config ./module-3/webpack.config.js",
-    "test-module-4": "jest --watch --config ./module-4/jest.config.js",
-    "test-module-5": "jest --watch --config ./module-5/jest.config.js",
+    "test-module-4": "jest --watch -i --config ./module-4/jest.config.js",
+    "test-module-5": "jest --watch -i --config ./module-5/jest.config.js",
     "build-module-5": "webpack --config ./module-5/webpack.config.js",
     "serve-module-5": "webpack-dev-server --config ./module-5/webpack.config.js"
   },
