@@ -6,7 +6,7 @@ Conway's Game Of Life is a cellular automaton devised by the British mathematici
 
 The Game Of Life is based on a large grid of cells, each of which has an "on" or "off" state. "Life" advances one tick at a time, and cells die, survive, or regenerate based on a simple set of rules. 
 
-For this module, the game board has been built for you. You will implement the rules that determine which cells die, which cells survive, and which sells regenerate, using TDD.
+For this module, the game board has been built for you. You will implement the rules that determine which cells die, which cells survive, and which cells regenerate, using TDD.
 
 ## Pair Up!
 
@@ -16,23 +16,23 @@ Remember when I said this workshop is collaborative? I meant it!
 
 **ACTION!** Choose one computer to work from. I recommend determining which of you is more comfortable using the other's text editor, and choosing that computer. 
 
-You'll take turns writing tests, implementing them, and refactoring. For now, let's get your chosen computer ready for the exercise. 
-
 ## Start up The Game
 
 **ACTION!** Open a new command window from the root of this project, and type `npm run serve-module-3`. This should open a browser window at localhost:8080. The screen will look like this:
 
 ![Game Of Life preview](preview.png)
 
-This is a randomized starting state for the Game Of Life. The green cells are cells that are alive.
+This is a randomized starting state for the Game Of Life. We're using a 40x40 grid in this implementation.
 
-This implementation of the game uses a 40x40 grid.
+Every cell in the grid can be in one of two states: alive or dead. The alive cells show as green, the dead cells are gray.
 
-**ACTION!** Hit the "Start" button. You should see the green cells dance around. Currently, they are configured to randomly replace the previous state. You'll be using TDD to correct this!
+The game advances one tick at a time. For every tick, each cell will determine its next state based on its 8 neighbors. 
+
+**ACTION!** Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to randomly replace the previous state. You'll be using TDD to correct this!
 
 **ACTION!** Hit the "Stop" button. The green cells should stop dancing. You may have to click more than once to make them stop.
 
-There's no actual reason you need to stop the game - but the "Stop" button is there in case you get sick of watching the cells dance.
+There's no actual reason you need to stop the game - the "Stop" button is there in case you get sick of watching the cells dance.
 
 ## Ground Rules
 
@@ -42,33 +42,17 @@ There's no actual reason you need to stop the game - but the "Stop" button is th
 
 You'll be taking turns writing tests and making them pass, and working together to refactor along the way. 
 
-### You may collaborate to define the test cases
+### Collaborate to define the test cases
 
 ### When you are typing, you decide the code that is written
 
 You may ask for the other’s opinion, but the other may not force you to write the code a certain way.
 
-## The Problem Space
-
-Every cell in the grid can be in one of two states: alive or dead. In this implementation, alive cells show as green, and the grid is 40x40.
-
-The game advances one tick at a time. For every tick, each cell will determine its next state based on its 8 neighbors. The exact rules will be explained soon.
-
 ## Let's Play!
-
-Your workflow will look like this: 
-
-* Person 1: Write a failing test
-* Person 2: Make the test pass
-* Person 1&2: Refactor together
-* Person 2: Write a failing test
-* Person 1: Make the test pass
-* Person 1&2: Refactor together
-* Repeat
 
 **ACTION!** Take a look at the `./get-next-state.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
-Currently, you'll see one test, named `it('returns a 40x40 grid'...)`. This test verifies that when you call getNextState, it returns a 40x40 grid.
+Currently you'll see one test, named `it('returns a 40x40 grid'...)`. This test verifies that when you call getNextState, it returns a 40x40 grid.
 
 A "grid" is represented as an array of arrays. Each child array is a "row" in the grid; each item in a child array is a "cell" in the grid.
 
@@ -84,9 +68,9 @@ For example, this is a representation of a 3x3 grid, where only the middle cell 
 
 **ACTION!** Take a look at the `./get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
 
-Currently, you'll see that `getNextState` is returning 40 dummy rows. Each dummy row returns 40 randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly. 
+Currently you'll see that `getNextState` is returning 40 dummy rows. Each dummy row returns 40 randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly. 
 
-When the app runs, it will begin with a random 40x40 grid. It will then call `getNextState` repeatedly, passing in the current 40x40 state. Your goal is to update `getNextState` so that it returns the correct 40x40 state.
+When the app is running, it will repeatedly pass the current 40x40 state to `getNextState`, and render the state returned. Your goal is to update `getNextState` so that it returns the correct 40x40 state.
 
 **ACTION!** Start up the test suite. 
 
@@ -98,7 +82,15 @@ At this point, no tests should run, and you should see this message:
 
 **ACTION!** Start implementing the specifications!
 
-Remember to collaborate and take turns writing tests & implementing features. 
+Your collaboration workflow will look like this: 
+
+* Person 1: Write a failing test
+* Person 2: Make the test pass
+* Person 1&2: Refactor together
+* Person 2: Write a failing test
+* Person 1: Make the test pass
+* Person 1&2: Refactor together
+* Repeat
 
 ## Specifications
 
@@ -129,6 +121,10 @@ Extract functions to make your code smaller & easier to understand.
 ### Do one task at a time
 
 Try not to implement more than one spec at a time!
+
+### You don't have to pass in an entire 40x40 grid in your tests
+
+A test would be most effective passing in a 3x3 grid with neighbors constructed for the middle cell, and making assertions against only that middle cell.
 
 ### Don't forget - each cell has up to 8 neighbors, not 4.
 
@@ -170,15 +166,14 @@ it('dies if it is alive and has less than two neighbors', () => {
 
   const result = getNextState(input);
 
-  // These assert specific cells, instead of the entire result grid.
-  expect(result[0][0]).toEqual(0);
+  // This asserts against a specific cell, instead of the entire result grid.
   expect(result[1][1]).toEqual(0);
 })
 ```
 
 ### Refactor to make space for a new feature before you write its test
 
-Sometimes the current state of our code isn't ready for us to introduce a new spec. More directly, a new spec would be more easily introduced if we first made some changes to our code. When you notice this, refactor your code before writing the next failing test. This allows you to remain in green for longer, instead of fighting your refactor while in a state of red.
+Sometimes the current state of our code isn't ready for us to introduce a new spec. A new spec might be more easily introduced if we first make some changes to our code. When you notice this, refactor your code before writing the next failing test. This allows you to remain in green for longer, instead of fighting your refactor while in a state of red.
 
 ### If you support "the blinker", you're probably feature-complete.
 
@@ -208,3 +203,6 @@ and verify the return value is
 
 If your system supports the blinker, you've probably got all of your features implemented properly.
 
+## When are you complete?
+
+When the game acts like this:
