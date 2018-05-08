@@ -1,3 +1,3 @@
-export default function add(a) {
+export default function add(numbers) {
   return undefined;
 }
