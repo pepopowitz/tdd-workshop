@@ -16,15 +16,15 @@ The more you practice TDD, the sooner it becomes your default approach to a prob
 
 ## Let's Play!
 
-**ACTION!** Take a look at the `index.spec.js` test file. This is where you'll be writing your tests for this exercise.
+**ACTION!** Take a look at the `add.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
 Currently, there is one test, named `it('exists'...)`. This test simply verifies that the `add` function exists.
 
 Depending on your level of dogma, it is either very important to create a test that verifies the existence of a function before you write it, or very unimportant.
 
-**ACTION!** Take a look at the `index.js` test file. This is where you'll be implementing your string calculator/add function. 
+**ACTION!** Take a look at the `add.js` test file. This is where you'll be implementing your string calculator/add function. 
 
-Currently, you'll see that the function in `index.js` is returning `undefined`.
+Currently, you'll see that the function in `add.js` is returning `undefined`.
 
 **ACTION!!** Start up the test suite.
 
