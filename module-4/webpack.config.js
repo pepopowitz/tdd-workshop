@@ -4,8 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './module-3/index.js',
-    rules: './module-3/get-next-state.js',
+    app: './module-4/index.js',
+    rules: './module-4/get-next-state.js',
   },
   devtool: 'inline-source-map',
   devServer: {

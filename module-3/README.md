@@ -1,80 +1,34 @@
-# Module: Collaborative Code Kata - Conway's Game Of Life
+# Module: Code Kata
 
 ## Background
 
-Conway's Game Of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. [(Wikipedia)](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+A *code kata* is a programming exercise in which a developer attempts to solve a pre-defined problem, to hone their skills.
 
-The Game Of Life is based on a large grid of cells, each of which has an "on" or "off" state. "Life" advances one tick at a time, and cells die, survive, or regenerate based on a simple set of rules. 
+Code katas are generally not real-world problems. They have well-defined specifications and rules. 
 
-For this module, the game board has been built for you. You will implement the rules that determine which cells die, which cells survive, and which cells regenerate, using TDD.
+Code katas are more about developing a practice, and less about solving the underlying problems. Katas are intended to help you build a testing habit. By practicing tests
 
-## Pair Up!
-
-Remember when I said this workshop is collaborative? I meant it!
-
-**ACTION!** Pair up with the person sitting next to you. You're going to work together for this module. 
-
-**ACTION!** Choose one computer to work from. I recommend determining which of you is more comfortable using the other's text editor, and choosing that computer. 
-
-## Start up The Game
-
-**ACTION!** Open a new command window from the root of this project, and type `npm run serve-module-3`. This should open a browser window at localhost:8080. The screen will look like this:
-
-![Game Of Life preview](preview.png)
-
-This is a randomized starting state for the Game Of Life. We're using a 40x40 grid in this implementation.
-
-Every cell in the grid can be in one of two states: alive or dead. The alive cells show as green, the dead cells are gray.
-
-The game advances one tick at a time. For every tick, each cell will determine its next state based on its 8 neighbors. 
-
-**ACTION!** Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to randomly replace the previous state. You'll be using TDD to correct this!
-
-**ACTION!** Hit the "Stop" button. The green cells should stop dancing. You may have to click more than once to make them stop.
-
-There's no actual reason you need to stop the game - the "Stop" button is there in case you get sick of watching the cells dance.
+The more you practice TDD, the sooner it becomes your default approach to a problem. Katas are a means to help you get there.
 
 ## Ground Rules
-
-### Don't write new code without writing a test first
-
-### Take turns
-
-You'll be taking turns writing tests and making them pass, and working together to refactor along the way. 
-
-### Collaborate to define the test cases
-
-### When you are typing, you decide the code that is written
-
-You may ask for the other’s opinion, but the other may not force you to write the code a certain way.
+* No code without tests
+* Do one task at a time; try not to read ahead
 
 ## Let's Play!
 
-**ACTION!** Take a look at the `./get-next-state.spec.js` test file. This is where you'll be writing your tests for this exercise.
+**ACTION!** Take a look at the `index.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
-Currently you'll see one test, named `it('returns a 40x40 grid'...)`. This test verifies that when you call getNextState, it returns a 40x40 grid.
+Currently, there is one test, named `it('exists'...)`. This test simply verifies that the `add` function exists.
 
-A "grid" is represented as an array of arrays. Each child array is a "row" in the grid; each item in a child array is a "cell" in the grid.
+Depending on your level of dogma, it is either very important to create a test that verifies the existence of a function before you write it, or very unimportant.
 
-For example, this is a representation of a 3x3 grid, where only the middle cell is active:
+**ACTION!** Take a look at the `index.js` test file. This is where you'll be implementing your string calculator/add function. 
 
-```
-[
-  [0,0,0], // Row 1
-  [0,1,0], // Row 2
-  [0,0,0], // Row 3
-]
-```
+Currently, you'll see that the function in `index.js` is returning `undefined`.
 
-**ACTION!** Take a look at the `./get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
+**ACTION!!** Start up the test suite.
 
-Currently you'll see that `getNextState` is returning 40 dummy rows. Each dummy row returns 40 randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly. 
-
-When the app is running, it will repeatedly pass the current 40x40 state to `getNextState`, and render the state returned. Your goal is to update `getNextState` so that it returns the correct 40x40 state.
-
-**ACTION!** Start up the test suite. 
-
-From a command line at the root of this workshop project, type `npm run test-module-3`. This will start up the test suite. 
+From a command line at the root of the workshop project, type `npm run test-module-3`. This will start up the test suite.
 
 At this point, no tests should run, and you should see this message: 
 
@@ -82,127 +36,55 @@ At this point, no tests should run, and you should see this message:
 
 **ACTION!** Start implementing the specifications!
 
-Your collaboration workflow will look like this: 
+### The String Calculator kata 
 
-* Person 1: Write a failing test
-* Person 2: Make the test pass
-* Person 1&2: Refactor together
-* Person 2: Write a failing test
-* Person 1: Make the test pass
-* Person 1&2: Refactor together
-* Repeat
+This kata builds a function that takes numbers in as string input, and returns their sum. It emphasizes refactoring. 
 
-## Specifications
+The kata is adapted from [http://osherove.com/tdd-kata-1](http://osherove.com/tdd-kata-1).
 
-#### 0. Begin with a random "seed" or starting sequence. For each "tick" of the game, return the next state based on the current state.
+### Specifications
 
-This is already done for you. You just need to implement specs 1-4, in get-next-state.js.
+#### 0. Note: You do not need to validate input. Assume all input into the method is valid.
 
-### For a space that is 'alive' (i.e. has a value of 1 in our implementation):
+#### 1. Create a simple function add(string numbers)
 
-#### 1. Each cell with one or no neighbors dies (becomes a 0), as if by solitude.
-  
-#### 2. Each cell with four or more neighbors dies (becomes a 0), as if by overpopulation.
+This is done for you! There's even a test to verify that the function exists.
 
-#### 3. Each cell with two or three neighbors survives (remains a 1).
+#### 2. The function can take 0, 1 or 2 numbers.
 
-### For a space that is 'dead' or 'empty' (i.e. has a value of 0):
+Example inputs: “” or “1” or “1,2”
 
-#### 4. Each cell with three neighbors becomes 'alive' (becomes a 1).
+For an empty string the function should return 0.
 
-## Suggestions
+For strings with 1 or 2 numbers, the function should return the sum of the numbers.
 
-This problem is hard! I don't expect you to finish. Even the first spec is difficult. Here are some suggestions that might help you along the way.
+Suggestions: 
 
-### Keep all methods below 5 lines
+Start with the simplest test case of an empty string and move to 1 and two numbers
 
-Extract functions to make your code smaller & easier to understand.
+Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
 
-### Do one task at a time
+Remember to refactor after each passing test
 
-Try not to implement more than one spec at a time!
+#### 3. Allow the add function to handle an unknown amount of numbers, separated by commas
 
-### You don't have to pass in an entire 40x40 grid in your tests
+#### 4. Allow the add function to handle new lines between numbers, instead of commas.
 
-A test would be most effective passing in a 3x3 grid with neighbors constructed for the middle cell, and making assertions against only that middle cell.
+The following input is ok:  “1\n2,3”  (will equal 6)
 
-### Don't forget - each cell has up to 8 neighbors, not 4.
+The following input is NOT ok:  “1,\n” (You don't need to write a test for this - just clarifying.)
 
-Diagonals count!
+#### 5. Support different delimiters
 
-### Start by writing specs that aren't going to ship.
+To specify a delimiter, the string will begin with two slashes, then the delimiter, then a new line. 
 
-Instead of only surviving if it has N neighbors, have a cell survive if it has a neighbor to the left...
+For example, the input “//;\n1;2” should return three. "//;\n" specifies that the delimiter is ";", and "1;2" should be added together.
 
-Then if it has a neighbor to the right...
+The delimiter specification is optional. All previously existing scenarios should still be supported.
 
-Then top, then down...
+#### 6. Calling add with a negative number should throw an error with the message “Negatives not allowed: X”, where X is the negative value passed.
 
-Then if it has more than one neighbor.
+If there are multiple negatives, show all of them in the error message. 
 
-None of these specifications are in the final solution, but they will help you build incremental code. They help prevent you having to make a leap to the final working solution, and point you in the right direction.
+For example, the input "1,-1,-4" should throw the error "Negatives not allowed: -1, -4".
 
-Eventually, though, you'll want to delete those incremental tests. 
-
-### Delete tests that are no longer helpful
-
-Often we use tests to guide us to a state that is closer to our final state, but not yet complete. You'll find a point where some tests no longer serve you. Don't be afraid to remove them, or to rewrite them to be helpful!
-
-### Make specific assertions 
-
-General assertions are likely to be invalidated by future tests.
-
-For example, comparing the result of a test to an entire grid is likely to become obsolete when we introduce later specs.
-
-Instead, write assertions that validate only the cells that prove your test, like the following.
-
-```
-it('dies if it is alive and has less than two neighbors', () => {
-  const input = [
-    [1,0,0],
-    [0,1,0],
-    [0,0,0]
-  ];
-
-  const result = getNextState(input);
-
-  // This asserts against a specific cell, instead of the entire result grid.
-  expect(result[1][1]).toEqual(0);
-})
-```
-
-### Refactor to make space for a new feature before you write its test
-
-Sometimes the current state of our code isn't ready for us to introduce a new spec. A new spec might be more easily introduced if we first make some changes to our code. When you notice this, refactor your code before writing the next failing test. This allows you to remain in green for longer, instead of fighting your refactor while in a state of red.
-
-### If you support "the blinker", you're probably feature-complete.
-
-"The blinker" is an oscillating pattern. Its makeup is such that it keeps itself "alive," and perpetually in motion. It looks like this: 
-
-![Blinker](blinker.gif)
-
-A good test for this oscillator would take input
-
-```
-[
-  [0,1,0],
-  [0,1,0],
-  [0,1,0]
-]
-```
-
-and verify the return value is 
-
-```
-[
-  [0,0,0],
-  [1,1,1],
-  [0,0,0]
-]
-```
-
-If your system supports the blinker, you've probably got all of your features implemented properly.
-
-## When are you complete?
-
-When the game acts like this:

@@ -1,6 +1,6 @@
 import App from './index';
 
-import looksLike from '../test.looksLike';
+import looksLike from '../test-setup/test.looksLike';
 
 expect.extend({
   toLookLike: looksLike,

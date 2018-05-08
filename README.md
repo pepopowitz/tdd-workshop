@@ -13,17 +13,31 @@ Once you complete [Module 0: Setup](./module-0/README.md), work through Modules 
 
 ### [Module 0: Setup](./module-0/README.md)
 
+This module will get you set up for the workshop. [Start here!](./module-0/README.md)
+
 ### [Module 1: Jest](./module-1/README.md)
+
+An introduction to Jest's interactive watch mode. This module will get you comfortable with running tests.
 
 ### [Module 2: TDD Demo](./module-2/README.md)
 
-### [Module 3: TDD](./module-3/README.md)
+An instructor-led demonstration of TDD. You'll experience the red-green-refactor feedback loop.
 
-### [Module 4: Katas](./module-4/README.md)
+### [Module 3: Code Kata](./module-3/README.md)
+
+A small problem that will help get you in the habit of writing tests first.
+
+### [Module 4: Solving Problems With TDD??? Bad name.](./module-4/README.md)
+
+A more complicated problem to give you more TDD experience.
 
 ### [Module 5: Real-life TDD](./module-5/README.md)
 
+Real-life problems aren't always easy to test. This module will teach you how to isolate things you can't control, and use TDD in the real world.
+
 ## Notes
+
+todo - move this to a resources.md?
 
 ### Setting up Jest
 
