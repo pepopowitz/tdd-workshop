@@ -6,6 +6,8 @@ This module will help you set up your local environment!
 
 You're going to need three tools installed: git, NodeJS, and NPM. 
 
+If you know you're all set with recent versions of these three things, skip ahead to [Clone This Repository](#clone-this-repository).
+
 ### 1. git
 
 There are 2 reasons you'll need git - 
