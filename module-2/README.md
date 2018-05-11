@@ -12,9 +12,9 @@ If you don't want to follow along with the group, feel free to build out FizzBuz
 
 ### How to play
 
-**ACTION!** Fire up the tests by opening a new command window at the root of this project, and running `npm run test-module-2`.
+&#128073; Fire up the tests by opening a new command window at the root of this project, and running `npm run test-module-2`.
 
-**ACTION!** Write tests & code to implement [the specifications](#specifications), one at a time. 
+&#128073; Write tests & code to implement [the specifications](#specifications), one at a time. 
 
 **REMEMBER!** Make sure you write a failing test before you implement each specification!
 

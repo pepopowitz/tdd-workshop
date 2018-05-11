@@ -12,13 +12,13 @@ For this module, the game board has been built for you. You will implement the r
 
 Remember when I said this workshop is collaborative? I meant it!
 
-**ACTION!** Pair up with the person sitting next to you. You're going to work together for this module. 
+&#128073; Pair up with the person sitting next to you. You're going to work together for this module. 
 
-**ACTION!** Choose one computer to work from. I recommend determining which of you is more comfortable using the other's text editor, and choosing that computer. 
+&#128073; Choose one computer to work from. I recommend determining which of you is more comfortable using the other's text editor, and choosing that computer. 
 
 ## Start up The Game
 
-**ACTION!** Open a new command window from the root of this project, and type `npm run serve-module-4`. This should open a browser window at localhost:8080. The screen will look like this:
+&#128073; Open a new command window from the root of this project, and type `npm run serve-module-4`. This should open a browser window at localhost:8080. The screen will look like this:
 
 ![Game Of Life preview](docs/preview.png)
 
@@ -28,9 +28,9 @@ Every cell in the grid can be in one of two states: alive or dead. The alive cel
 
 The game advances one tick at a time. For every tick, each cell will determine its next state based on its 8 neighbors. 
 
-**ACTION!** Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to randomly replace the previous state. You'll be using TDD to correct this!
+&#128073; Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to randomly replace the previous state. You'll be using TDD to correct this!
 
-**ACTION!** Hit the "Stop" button. The green cells should stop dancing. You may have to click more than once to make them stop.
+&#128073; Hit the "Stop" button. The green cells should stop dancing. You may have to click more than once to make them stop.
 
 There's no actual reason you need to stop the game - the "Stop" button is there in case you get sick of watching the cells dance.
 
@@ -50,7 +50,7 @@ You may ask for the other’s opinion, but the other may not force you to write 
 
 ## Let's Play!
 
-**ACTION!** Take a look at the `./get-next-state.spec.js` test file. This is where you'll be writing your tests for this exercise.
+&#128073; Take a look at the `./get-next-state.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
 Currently you'll see one test, named `it('returns a 40x40 grid'...)`. This test verifies that when you call getNextState, it returns a 40x40 grid.
 
@@ -66,13 +66,13 @@ For example, this is a representation of a 3x3 grid, where only the middle cell 
 ]
 ```
 
-**ACTION!** Take a look at the `./get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
+&#128073; Take a look at the `./get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
 
 Currently you'll see that `getNextState` is returning 40 dummy rows. Each dummy row returns 40 randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly. 
 
 When the app is running, it will repeatedly pass the current 40x40 state to `getNextState`, and render the state returned. Your goal is to update `getNextState` so that it returns the correct 40x40 state.
 
-**ACTION!** Start up the test suite. 
+&#128073; Start up the test suite. 
 
 From a command line at the root of this workshop project, type `npm run test-module-4`. This will start up the test suite. 
 
@@ -80,7 +80,7 @@ At this point, no tests should run, and you should see this message:
 
 `No tests found related to files changed since last commit.`
 
-**ACTION!** Start implementing the specifications!
+&#128073; Start implementing the specifications!
 
 Your collaboration workflow will look like this: 
 

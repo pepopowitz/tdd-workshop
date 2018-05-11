@@ -16,17 +16,17 @@ The more you practice TDD, the sooner it becomes your default approach to a prob
 
 ## Let's Play!
 
-**ACTION!** Take a look at the `add.spec.js` test file. This is where you'll be writing your tests for this exercise.
+&#128073; Take a look at the `add.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
 Currently, there is one test, named `it('exists'...)`. This test simply verifies that the `add` function exists.
 
 Depending on your level of dogma, it is either very important to create a test that verifies the existence of a function before you write it, or very unimportant.
 
-**ACTION!** Take a look at the `add.js` test file. This is where you'll be implementing your string calculator/add function. 
+&#128073; Take a look at the `add.js` test file. This is where you'll be implementing your string calculator/add function. 
 
 Currently, you'll see that the function in `add.js` is returning `undefined`.
 
-**ACTION!!** Start up the test suite.
+&#128073; Start up the test suite.
 
 From a command line at the root of the workshop project, type `npm run test-module-3`. This will start up the test suite.
 
@@ -34,7 +34,7 @@ At this point, no tests should run, and you should see this message:
 
 `No tests found related to files changed since last commit.`
 
-**ACTION!** Start implementing the specifications!
+&#128073; Start implementing the specifications!
 
 ### The String Calculator kata 
 
@@ -58,13 +58,13 @@ For an empty string the function should return 0.
 
 For strings with 1 or 2 numbers, the function should return the sum of the numbers.
 
-Suggestions: 
+##### Suggestions: 
 
-Start with the simplest test case of an empty string and move to 1 and two numbers
+* Start with the simplest test case of an empty string and move to 1 and two numbers
 
-Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
+* Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
 
-Remember to refactor after each passing test
+* Remember to refactor after each passing test
 
 #### 3. Allow the add function to handle an unknown amount of numbers, separated by commas
 
