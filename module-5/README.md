@@ -1,6 +1,20 @@
-kitten-finder
 
-  Specs written out
-  App in place
-  An app that integrates with location services of your browser, and then calls an api to load things near you?
-  Samples like "what browser location data looks like"
+unicorn name generator as a service
+
+command line tool that takes inputs & calls unicorn name generator
+
+mock out unicorn name generator 
+
+
+fix a bug - middle name doesn't work if i give it an entire name? or what if I don't have a middle name?
+  can't send abbreviation for birth month?
+  birth month is off by one?
+  zeke gets the wrong name (copypasta)
+  do this in a test- 
+      birthDate: 'January',
+      birthDate: 26,
+    and make it pass. 
+    we get a call that it's generating the wrong name for this person.
+      this shows that sometimes your tests are wrong, and you need to fix THEM.
+  integration test - UI sends '26', but we're looking for 26
+  
