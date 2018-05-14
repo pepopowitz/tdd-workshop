@@ -92,7 +92,7 @@ This table lists the rules for generating a JavaScript unicorn name.
 |-------------------|--------------------|--------------------|-----------------------|------------------------------------|
 | **A**: Emerald    | **A**: Royal       | **A**: Hooves      | **Jan**: Tamer of     | **1**: Associative Arrays          |
 | **B**: Sunny      | **B**: Sugar       | **B**: Bubbles     | **Feb**: Wielder of   | **2**: JavaScript Fatigue          |
-| **C**: Snowy      | **C**: Magic       | **C**: Dream       | **Mar**: Breath of    | **3**: EcmaScript                  |
+| **C**: Snowy      | **C**: Magic       | **C**: Dream       | **Mar**: Breath of    | **3**: Yak Shaving                 |
 | **D**: Whispering | **D**: Sparkle     | **D**: Jewels      | **Apr**: Whisperer of | **4**: No Semicolons               |
 | **E**: Elegant    | **E**: Spotted     | **E**: Twirly-Tail | **May**: Face of      | **5**: Webpack                     |
 | **F**: Silly      | **F**: Happy       | **F**: Starshine   | **Jun**: Conjurer of  | **6**: Bananas in Boxes            |
@@ -108,13 +108,13 @@ This table lists the rules for generating a JavaScript unicorn name.
 | **P**: Merry      | **P**: Regal       | **P**: Comet       |                       | **16**: .babelrc                   |
 | **Q**: Shimmering | **Q**: Starry      | **Q**: Heart       |                       | **17**: Promises                   |
 | **R**: Cloudy     | **R**: Flowing     | **R**: Dandelions  |                       | **18**: Closures                   |
-| **S**: Sassy      | **S**: Cuddly      | **S**: Moonbeam    |                       | **19**: the DOM                    |
+| **S**: Sassy      | **S**: Cuddly      | **S**: Moonbeam    |                       | **19**: The virtual DOM            |
 | **T**: Soaring    | **T**: Forever     | **T**: Darkness    |                       | **20**: Electron                   |
 | **U**: Fuzzy      | **U**: Glitter     | **U**: Thunder     |                       | **21**: Type-safety                |
 | **V**: Fancy      | **V**: Cascading   | **V**: Starlight   |                       | **22**: Variable hoisting          |
 | **W**: Bedazzled  | **W**: Tender      | **W**: Brambles    |                       | **23**: The event loop             |
 | **X**: Prancing   | **X**: Sweet       | **X**: Twinkle     |                       | **24**: npm                        |
-| **Y**: Piercing   | **Y**: Feisty      | **Y**: Fairy       |                       | **25**: git                        |
+| **Y**: Piercing   | **Y**: Feisty      | **Y**: Fairy       |                       | **25**: CSS-in-JS                  |
 | **Z**: Dashing    | **Z**: Spirit      | **Z**: Miracle     |                       | **26**: IIFEs                      |
 |                   |                    |                    |                       | **27**: Pure functions             |
 |                   |                    |                    |                       | **28**: TypeScript                 |
