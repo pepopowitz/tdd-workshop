@@ -16,13 +16,13 @@ When the test suite starts running, it will give you a message that reads
 
 This is because you haven't made any local changes. By default, Jest only runs tests for files that have been affected by your local changes. This is really helpful for Test-Driven Development - it allows you to focus on the code you're currently writing.
 
-### Running all tests
+## Running all tests
 
 Jest does offer the ability to run all tests in your test suite. Let's do that now!
 
 👉 In the Jest watch window, hit `w`, then `a`. 
 
-This will run all tests in the test suite. Now, you should see a bunch of tests run! (And succeed!)
+This will run all tests in the test suite. You should see a bunch of tests run! (And succeed!)
 
 At any time, you can change the tests being run by hitting the `w` key, and selecting the tests you want to run. 
 
@@ -34,27 +34,27 @@ Jest offers you several options by which to filter your tests:
 * `t`: Run tests filtered by a test name regex pattern. This is useful when you want to run all tests related to a specific feature.
 * `o`: Run only tests that are affected by local changes since your last commit. This is the default when you start up Jest.
 
-Let's try a few of these out.
+**Note**: Test filters are generally combined. If you type `f` to filter by failing tests, and then `p` to filter by a filename, you will usually end up filtering by both. Jest will generally tell you how to clear out any existing filters. Sometimes it's `c` to clear existing filters, sometimes it's the same key you pressed to get into your current filter, sometimes you just have to hit `o` to get back to running only tests affected by local changes.
+
+## Let's try a few filters out!
 
 ### Running tests filtered by filename
 
 👉 In the Jest watch window, hit `w`, then `p`. 
 
-👉 Type ????? to filter by filenames containing ??????.
+👉 Type `birth` to filter by filenames containing `birth`.
 
-You should see ??? tests run. All of them are in the ???? file.
+You should see tests run for `birth-date-translator.js` and `birth-month-translator.js`. All of them should be passing.
 
 ### Running tests filtered by test name
 
-Do I have to clear?????
+👉 In the Jest watch window, hit `w`, then `c`, to clear the existing search filter.
 
 👉 In the Jest watch window, hit `w`, then `t`. 
 
-👉 Type ????? to filter by test names containing ??????.
+👉 Type `cat` to filter by test names containing `cat`.
 
-You should see ??? tests run. All of them contain the word ????. 
-
-Do I have to clear again?
+You should see 2 tests run. All of them contain the word `cat` (though Jest doesn't make that very clear).
 
 ### Running only tests affected by your latest changes.
 
@@ -64,25 +64,29 @@ Let's go back to the default - running only tests affected by your latest change
 
 You'll see the message again that "no tests were found related to your latest changes." 
 
-Let's make some changes!
+## So let's make some changes!
 
-birth month is missing tests???? Let's write some???
+Take a look at the [name generation table](#/generation-rules) at the end of this doc. The code is implemented for these rules, but it lacks tests!
 
+👉 Add tests for translation of your first name, middle name, last name, birth month, and birth date according to these rules. 
 
+You'll find existing tests for all of these translations in the `module-1/name-generator` folder: 
 
-  Add a test
-    Open ./????/???.spec.js
-    Add a test for some condition
-    Save file
-      View terminal - did it pass?
-        yes: move on to next test
-        no: figure out why it's not passing
-      Debugging tips:
-        console.log
-        VS Code debugger
+* first-name-translator.spec.js
+* middle-name-translator.spec.js
+* last-name-translator.spec.js
+* birth-month-translator.spec.js
+* birth-date-translator.spec.js
 
+👉 Add an "integration" test for the combination of your first name, middle name, last name, birth month, and birth date according to these rules. 
 
+You'll find existing "integration" tests in the `module-1/name-generator/index.spec.js` file.
 
+👉 If you complete these tasks early, write more tests!
+
+## Suggestions
+
+* If you get stuck on a test, use `console.log` to output values to help you identify the problem. You can use `console.log` from either your test code, or the function being tested, and it will show up in your Jest output.
 
 ## Generation Rules
 
