@@ -1,4 +1,4 @@
-# Module: Jest
+# Module 1: Jest
 
 ## Background
 

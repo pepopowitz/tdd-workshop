@@ -1,11 +1,11 @@
 # tdd-workshop
 This project contains materials for my TDD workshop, "Building Quality JavaScript With Test-Driven Development."
 
-The materials are divided into 5 modules. Start by reading the [Module 0: Setup](./module-0/README.md) instructions. 
+The materials are divided into 6 modules. Start by reading the [Module 0: Setup](./module-0/README.md) instructions. 
 
 If you are unable to complete [Module 0: Setup](./module-0/README.md), please raise your hand (if in-person), or create an issue according to the instructions in [Module 0: Setup](./module-0/README.md) (if not in-person). 
 
-Once you complete [Module 0: Setup](./module-0/README.md), work through Modules 1-4.
+Once you complete [Module 0: Setup](./module-0/README.md), work through Modules 1-5.
 
 
 
@@ -27,7 +27,7 @@ An instructor-led demonstration of TDD. You'll experience the red-green-refactor
 
 A small problem that will help get you in the habit of writing tests first.
 
-### [Module 4: Solving Problems With TDD??? Bad name.](./module-4/README.md)
+### [Module 4: Solving Problems Together - Conway's Game Of Life](./module-4/README.md)
 
 A more complicated problem to give you more TDD experience.
 

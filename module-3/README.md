@@ -1,4 +1,4 @@
-# Module: Code Kata
+# Module 3: Code Kata
 
 ## Background
 

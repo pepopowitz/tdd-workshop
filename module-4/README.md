@@ -1,4 +1,4 @@
-# Module: Collaborative Kata - Conway's Game Of Life
+# Module: Solving Problems Together - Conway's Game Of Life
 
 ## Background
 
