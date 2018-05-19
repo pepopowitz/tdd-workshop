@@ -1,0 +1,27 @@
+h1, h2{
+  color: violet;
+  text-align: center;
+}
+
+label {
+  display: block;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.inputs div {
+  margin: 0 1rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

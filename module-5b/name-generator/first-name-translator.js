@@ -24,7 +24,7 @@ const map = {
   W: 'Bedazzled',
   X: 'Prancing',
   Y: 'Piercing',
-  Z: 'Dashing'
+  Z: 'Piercing'
 }
   
   

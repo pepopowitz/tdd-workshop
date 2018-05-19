@@ -1,7 +1,7 @@
 const map = {
   January: 'Tamer of',
   February: 'Wielder of',
-  March: 'Breath of',
+  March: 'Whisperer of',
   April: 'Whisperer of',
   May: 'Face of',
   June: 'Conjurer of',

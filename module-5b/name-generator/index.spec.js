@@ -24,4 +24,16 @@ describe('module-1/name-generator/index', () => {
 
     expect(result).toEqual('Sunny Sugar Darkness, Whisperer of JSX');
   });
+
+  it('generates Alex Puccio a name', () => {
+    const result = generateName({
+      firstName: 'Alex',
+      middleName: 'Something',
+      lastName: 'Puccio',
+      birthDate: 'March',
+      birthDate: 21,
+    });
+
+    expect(result).toEqual('Emerald Cuddly Comet,  Type-safety');
+  });
 });

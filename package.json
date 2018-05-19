@@ -13,11 +13,12 @@
     "test-module-4": "jest --watch -i --config ./module-4/jest.config.js",
     "build-module-4": "webpack --config ./module-4/webpack.config.js",
     "serve-module-4": "webpack-dev-server --config ./module-4/webpack.config.js",
-    "test-module-5": "jest --watch -i --config ./module-5/jest.config.js",
-    "build-module-5": "webpack --config ./module-5/webpack.config.js",
-    "serve-module-5": "concurrently --names \"WEB,API\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run serve-module-5-web\" \"npm run serve-module-5-api\"",
-    "serve-module-5-web": "webpack-dev-server --config ./module-5/webpack.config.js",
-    "serve-module-5-api": "nodemon --exec babel-node --presets=env -- ./module-5/api/server.js"
+    "test-module-5a": "jest --watch -i --config ./module-5a/jest.config.js",
+    "build-module-5a": "webpack --config ./module-5a/webpack.config.js",
+    "serve-module-5a": "concurrently --names \"WEB,API\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run serve-module-5a-web\" \"npm run serve-module-5a-api\"",
+    "serve-module-5a-web": "webpack-dev-server --config ./module-5a/webpack.config.js",
+    "serve-module-5a-api": "nodemon --exec babel-node --presets=env -- ./module-5a/api/server.js",
+    "test-module-5b": "jest --watch -i --config ./module-5b/jest.config.js"
   },
   "repository": {
     "type": "git",
@@ -56,8 +57,11 @@
     "webpack-dev-server": "^3.1.3"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
+    "form-serialize": "^0.7.2",
     "lodash": "^4.17.10"
   }
 }

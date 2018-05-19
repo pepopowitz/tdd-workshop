@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>🏃 Trail 🚲 Finder 🏃</title>
+</head>
+
+<body>
+  <h1>
+      🏃 Trail 🚲 Finder 🏃
+  </h1>
+  <form id="searchForm">
+    <div class="inputs">
+
+      <div>
+        <label for="sport">Sport: </label>
+        <select name="sport" id="sport">
+          <option value="">All</option>
+          <option value="Cycling">Cycling</option>
+          <option value="Mountain Biking">Mountain Biking</option>
+          <option value="Running">Running</option>
+          <option value="Trail Running">Trail Running</option>
+        </select>
+      </div>
+      <div>
+        <label for="hills">Hills: </label>
+        <select name="hills" id="hills">
+          <option value="">All</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+      <div>
+        <label for="distance">Distance: </label>
+        <input type="text" name="distance" />
+      </div>
+    </div>
+    <div class="actions">
+      <button type="submit">Find some trails!</button>
+    </div>
+  </form>
+  <div id="output"></div>
+</body>
+
+</html>

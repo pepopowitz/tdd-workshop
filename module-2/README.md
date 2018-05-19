@@ -1,4 +1,4 @@
-# Module: Test-Driven Development Demo
+# Module 2: Test-Driven Development Demo
 
 ## Instructions
 

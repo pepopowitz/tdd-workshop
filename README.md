@@ -31,9 +31,17 @@ A small problem that will help get you in the habit of writing tests first.
 
 A more complicated problem to give you more TDD experience.
 
-### [Module 5: Real-life TDD](./module-5/README.md)
+### Module 5: Real-life TDD
 
-Real-life problems aren't always easy to test. This module will teach you how to isolate things you can't control, and use TDD in the real world.
+Module 5 will give you experience with applying TDD to real-life problems.
+
+#### [Module 5a: Mocking Dependencies](./module-5a/README.md)
+
+Real-life problems aren't always easy to test. This submodule will teach you how to isolate things you can't control.
+
+#### [Module 5b: Fixing Bugs With TDD](./module-5b/README.md)
+
+One of the best places to introduce TDD into a project is by fixing bugs. This submodule will show you how to fix bugs with TDD, giving you confidence to introduce it into your projects.
 
 ## Notes
 

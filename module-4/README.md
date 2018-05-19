@@ -1,4 +1,4 @@
-# Module: Solving Problems Together - Conway's Game Of Life
+# Module 4: Solving Problems Together - Conway's Game Of Life
 
 ## Background
 

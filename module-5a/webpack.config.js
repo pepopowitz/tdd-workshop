@@ -4,18 +4,24 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './module-5/app.js',
+    app: ['babel-polyfill', './module-5a/index.js'],
   },
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
-    open: true
+    open: true,
+    proxy: {
+      "/api": {
+        target: "http://localhost:7000",
+        pathRewrite: {"^/api" : ""}
+      }
+    }
   },
   mode: 'development',
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './module-5/index.html'
+      template: './module-5a/index.html'
     }),
   ],
   output: {
