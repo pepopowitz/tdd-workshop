@@ -1,8 +1,6 @@
 # Module 2: Test-Driven Development Demo
 
-## Instructions
-
-The instructor will lead the group through a demonstration of TDD. Follow along!
+This module will show you what TDD looks like in practice. The instructor will lead the group through a demonstration of TDD. Follow along!
 
 ## Why is this module here, then?
 

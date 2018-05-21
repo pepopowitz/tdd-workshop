@@ -2,7 +2,7 @@
 
 ## Background
 
-This module allows you to explore the Jest watch-mode. 
+This module allows you to explore the Jest watch-mode. It will help you get comfortable running tests in this workshop.
 
 The code under test is a "✨JavaScript Unicorn 🦄 Name Generator ✨". The rules for generating names can be seen in [the table at the end of this README](#generation-rules). 
 
@@ -86,7 +86,7 @@ You'll find existing "integration" tests in the `module-1/name-generator/index.s
 
 ## Suggestions
 
-* If you get stuck on a test, use `console.log` to output values to help you identify the problem. You can use `console.log` from either your test code, or the function being tested, and it will show up in your Jest output.
+* If you get stuck on a test, use `console.log` to output values to help you identify the problem. You can use `console.log` from your test code, or from the function being tested, and it will show up in your Jest output.
 
 ## Generation Rules
 

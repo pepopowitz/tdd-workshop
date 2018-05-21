@@ -1,5 +1,7 @@
 # Module 3: Code Katas
 
+This module will help get you in the habit of writing tests first. 
+
 ## Background
 
 A *code kata* is a programming exercise in which a developer attempts to solve a pre-defined problem, to hone their skills.

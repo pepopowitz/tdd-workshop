@@ -10,7 +10,7 @@ expect.extend({
 
 jest.mock('./render-output');
 
-describe('module-5a/app/search-form/render-erroneous-output', () => {
+describe('module-5ab/app/search-form/render-erroneous-output', () => {
   it('renders an error', () => {
     const result = renderErroneousOutput('Something happened');
 

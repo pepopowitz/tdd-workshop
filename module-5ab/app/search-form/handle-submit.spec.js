@@ -8,7 +8,7 @@ jest.mock('./call-api');
 jest.mock('./render-successful-output');
 jest.mock('./render-erroneous-output');
 
-describe('module-5a/app/search-form/handle-submit', () => {
+describe('module-5ab/app/search-form/handle-submit', () => {
   beforeEach(() => {
     callApi.mockClear();
     renderSuccessfulOutput.mockReset();

@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: ['babel-polyfill', './module-5a/index.js'],
+    app: ['babel-polyfill', './module-5ab/index.js'],
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './module-5a/index.html'
+      template: './module-5ab/index.html'
     }),
   ],
   output: {

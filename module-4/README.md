@@ -1,5 +1,7 @@
 # Module 4: Solving Problems Together - Conway's Game Of Life
 
+This module presents a more complicated problem to give you more TDD experience. We'll work through it in pairs.
+
 ## Background
 
 Conway's Game Of Life is a cellular automaton devised by the British mathematician John Horton Conway in 1970. [(Wikipedia)](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)

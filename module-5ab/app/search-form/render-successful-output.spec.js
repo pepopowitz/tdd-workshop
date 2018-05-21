@@ -9,7 +9,7 @@ expect.extend({
 
 jest.mock('./render-output');
 
-describe('module-5a/app/search-form/render-successful-output', () => {
+describe('module-5ab/app/search-form/render-successful-output', () => {
   beforeEach(() => {
     renderOutput.mockReset();
   });

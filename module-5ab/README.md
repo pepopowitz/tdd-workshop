@@ -1,6 +1,13 @@
 # Module 5 - Real-life TDD
 
+Module 5 gives you experience with applying TDD to real-life problems.
+
 ## Mocking dependencies
+
+Real-life problems aren't always easy to test. This submodule will teach you how to isolate things you don't control, or aren't sure how to test.
+
+
+
 
 Route finder
 
@@ -13,9 +20,9 @@ mock out api
 
 ## Business logic
 
-One great place to introduce TDD into your app is business logic. Business logic is generally not related to UI, which is harder to test. It can also be easily isolated to small functions, which makes it easier to write, read, and maintain tests. 
+One great place to introduce TDD into your app is business logic. Business logic is generally not related to UI, so it is usually easier to test. It can also be easily isolated to small functions, which makes it easier to write, read, and maintain tests. 
 
->> Write tests to handle the `distance` parameter being passed into our trails API controller (`/module-5a/api/trails/controller.js`).
+>> Write tests to handle the `distance` parameter being passed into our trails API controller (`/module-5ab/api/trails/controller.js`).
 
 We get a query parameter passed into the api for handling distances. It's named 'distance', and it contains a number that reflects the approximate number of miles we want to search for.
 

@@ -6,7 +6,7 @@ import callApi from './call-api';
 
 jest.mock('axios');
 
-describe('module-5a/app/submit-form', () => {
+describe('module-5ab/app/search-form/call-api', () => {
   beforeEach(() => {
     axios.get.mockReset();
   });

@@ -1,6 +1,10 @@
 # Module 5 - Real-life TDD
 
+Module 5 gives you experience with applying TDD to real-life problems.
+
 ## Fixing bugs
+
+One of the best places to introduce TDD into a project is by fixing bugs. This submodule will show you how to fix bugs with TDD, giving you confidence to introduce it into your projects.
 
 Fixing bugs - 
   1. People who don't use capital letters are not getting results.
@@ -16,7 +20,7 @@ Fixing bugs -
     Write a test against the first-name-translator for Zeke, and see if that helps you find the bug.
   5. Alex Puccio calls to tell us she's getting the wrong name. We tell her that can't be possible, we even wrote a test specifically for her.
     Look again [at the generation rule table](#generation-rules). We're generating the wrong name for her. 
-    See if you can figure out why her test (in module-5b/name-generator/index.spec.js) is incorrectly passing, correct the test, and then correct the behavior.
+    See if you can figure out why her test (in module-5c/name-generator/index.spec.js) is incorrectly passing, correct the test, and then correct the behavior.
 
     Tests aren't infallible. Sometimes we get them wrong, and in doing so, we miss bugs. Test-Driven Development can't help you escape bugs, but it can help you document requirements exactly as you understand them.
 

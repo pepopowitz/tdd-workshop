@@ -2,7 +2,7 @@ import controller from './controller';
 
 import trailData from '../trail-data';
 
-describe('module-5a/api/trails/controller', () => {
+describe('module-5ab/api/trails/controller', () => {
   function aMockResponse() {
     return {
       json: jest.fn(),
