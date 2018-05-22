@@ -1,5 +1,3 @@
-// Look at me...2nd
-
 // This function is an "orchestrator". It doesn't really do anything, except call 
 //  other functions in the appropriate sequence.
 // Orchestrators can be useful to build out via TDD when you aren't sure about 

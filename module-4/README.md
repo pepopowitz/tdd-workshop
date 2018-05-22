@@ -18,7 +18,7 @@ Remember when I said this workshop is collaborative? I meant it!
 
 &#128073; Choose one computer to work from. I recommend determining which of you is more comfortable using the other's text editor, and choosing that computer. 
 
-## Start up The Game
+## Start Up The Game
 
 &#128073; Open a new command window from the root of this project, and type `npm run serve-module-4`. This should open a browser window at localhost:8080. The screen will look like this:
 
@@ -52,7 +52,7 @@ You may ask for the other’s opinion, but the other may not force you to write 
 
 ## Let's Play!
 
-&#128073; Take a look at the `./get-next-state.spec.js` test file. This is where you'll be writing your tests for this exercise.
+&#128073; Take a look at the `module-4/get-next-state.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
 Currently you'll see one test, named `it('returns a 40x40 grid'...)`. This test verifies that when you call getNextState, it returns a 40x40 grid.
 
@@ -68,7 +68,7 @@ For example, this is a representation of a 3x3 grid, where only the middle cell 
 ]
 ```
 
-&#128073; Take a look at the `./get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
+&#128073; Take a look at the `module-4/get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
 
 Currently you'll see that `getNextState` is returning 40 dummy rows. Each dummy row returns 40 randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly. 
 
@@ -98,7 +98,7 @@ Your collaboration workflow will look like this:
 
 #### 0. Begin with a random "seed" or starting sequence. For each "tick" of the game, return the next state based on the current state.
 
-This is already done for you. You just need to implement specs 1-4, in get-next-state.js.
+This is already done for you. You just need to implement specs 1-4, in `get-next-state.js`.
 
 ### For a space that is 'alive' (i.e. has a value of 1 in our implementation):
 

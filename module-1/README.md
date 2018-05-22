@@ -18,7 +18,7 @@ This is because you haven't made any local changes. By default, Jest only runs t
 
 ## Running all tests
 
-Jest does offer the ability to run all tests in your test suite. Let's do that now!
+Jest also offers the ability to run all tests in your test suite. Let's do that now!
 
 👉 In the Jest watch window, hit `w`, then `a`. 
 
@@ -34,7 +34,7 @@ Jest offers you several options by which to filter your tests:
 * `t`: Run tests filtered by a test name regex pattern. This is useful when you want to run all tests related to a specific feature.
 * `o`: Run only tests that are affected by local changes since your last commit. This is the default when you start up Jest.
 
-**Note**: Test filters are generally combined. If you type `f` to filter by failing tests, and then `p` to filter by a filename, you will usually end up filtering by both. Jest will generally tell you how to clear out any existing filters. Sometimes it's `c` to clear existing filters, sometimes it's the same key you pressed to get into your current filter, sometimes you just have to hit `o` to get back to running only tests affected by local changes.
+**Note**: Test filters are generally combined. If you type `f` to filter by failing tests, and then `p` to filter by a filename, you will usually end up filtering by both. Jest will usually tell you how to clear out any existing filters. Sometimes it's `c` to clear existing filters, sometimes it's the same key you pressed to get into your current filter, sometimes you just have to hit `o` to get back to running only tests affected by local changes.
 
 ## Let's try a few filters out!
 
@@ -64,19 +64,19 @@ Let's go back to the default - running only tests affected by your latest change
 
 You'll see the message again that "no tests were found related to your latest changes." 
 
-## So let's make some changes!
+## Let's make some changes!
 
-Take a look at the [name generation table](#/generation-rules) at the end of this doc. The code is implemented for these rules, but it lacks tests!
+Take a look at the [name generation table](#generation-rules) at the end of this doc. The code is implemented for these rules, but it lacks tests!
 
 👉 Add tests for translation of your first name, middle name, last name, birth month, and birth date according to these rules. 
 
 You'll find existing tests for all of these translations in the `module-1/name-generator` folder: 
 
-* first-name-translator.spec.js
-* middle-name-translator.spec.js
-* last-name-translator.spec.js
-* birth-month-translator.spec.js
-* birth-date-translator.spec.js
+* `first-name-translator.spec.js`
+* `middle-name-translator.spec.js`
+* `last-name-translator.spec.js`
+* `birth-month-translator.spec.js`
+* `birth-date-translator.spec.js`
 
 👉 Add an "integration" test for the combination of your first name, middle name, last name, birth month, and birth date according to these rules. 
 

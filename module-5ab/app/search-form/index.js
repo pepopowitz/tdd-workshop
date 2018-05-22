@@ -1,5 +1,3 @@
-// Look at me...1st
-
 // This function does a bunch of DOM interaction, and I'm not sure how to test it.
 //  I've isolated the DOM interactions into this file, and moved all of the
 //   things that I can test into other testable functions (e.g. handleSubmit).

@@ -1,15 +1,21 @@
 import renderSuccessfulOutput from './render-successful-output';
+
+// This is the dependency we will mock.
 import renderOutput from './render-output';
 
+// looksLike is a function we'll use to add a new Jest matcher, for comparing HTML.
 import looksLike from '../../test-setup/test.looksLike';
 
+// expect.extend adds a new Jest matcher, in this case named `toLookLike`.
 expect.extend({
   toLookLike: looksLike,
 });
 
+// Mock the dependency.
 jest.mock('./render-output');
 
 describe('module-5ab/app/search-form/render-successful-output', () => {
+  // Reset the mock.
   beforeEach(() => {
     renderOutput.mockReset();
   });
@@ -26,6 +32,8 @@ describe('module-5ab/app/search-form/render-successful-output', () => {
   });
 
   it('renders a list if there are results', () => {
+    // In this test we don't need to provide a fake implementation; we just want to 
+    //  "spy" on the original, to see what gets passed to it.
     const results = [
       {
         name: 'name 1',
@@ -43,8 +51,11 @@ describe('module-5ab/app/search-form/render-successful-output', () => {
 
     renderSuccessfulOutput(results);
 
+    // This function will grab the argument we passed to the last call of renderOutput.
     const rendered = getArgumentFromLastCall();
 
+    // Then we can compare that argument's outerHTML to some actual markup.
+    //  Note that we're using our new `toLookLike` matcher that we added via `expect.extend`.
     expect(rendered.outerHTML).toLookLike(
       `<ul>
         <li>
@@ -68,6 +79,7 @@ describe('module-5ab/app/search-form/render-successful-output', () => {
   });
 });
 
+// This function grabs the argument we passed to the last call of renderOutput, if it exists.
 function getArgumentFromLastCall() {
   if (renderOutput.mock.calls.length === 0) {
     return undefined;

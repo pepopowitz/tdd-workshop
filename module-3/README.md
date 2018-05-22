@@ -8,9 +8,7 @@ A *code kata* is a programming exercise in which a developer attempts to solve a
 
 Code katas are generally not real-world problems. They have well-defined specifications and rules. 
 
-Code katas are more about developing a practice, and less about solving the underlying problems. Katas are intended to help you build a testing habit. By practicing tests
-
-The more you practice TDD, the sooner it becomes your default approach to a problem. Katas are a means to help you get there.
+Code katas are more about developing a practice, and less about solving the underlying problems. Katas are intended to help you build a testing habit. The more you practice TDD on sample problems, the sooner TDD becomes your default approach to real problems.
 
 ## Ground Rules
 * No code without tests
@@ -18,13 +16,13 @@ The more you practice TDD, the sooner it becomes your default approach to a prob
 
 ## Let's Play!
 
-&#128073; Take a look at the `add.spec.js` test file. This is where you'll be writing your tests for this exercise.
+&#128073; Take a look at the `module-3/add.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
 Currently, there is one test, named `it('exists'...)`. This test simply verifies that the `add` function exists.
 
 Depending on your level of dogma, it is either very important to create a test that verifies the existence of a function before you write it, or very unimportant.
 
-&#128073; Take a look at the `add.js` test file. This is where you'll be implementing your string calculator/add function. 
+&#128073; Take a look at the `module-3/add.js` test file. This is where you'll be implementing your string calculator/add function. 
 
 Currently, you'll see that the function in `add.js` is returning `undefined`.
 
@@ -62,7 +60,7 @@ For strings with 1 or 2 numbers, the function should return the sum of the numbe
 
 ##### Suggestions: 
 
-* Start with the simplest test case of an empty string and move to 1 and two numbers
+* Start with the simplest test case of an empty string and move to 1 and 2 numbers
 
 * Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
 

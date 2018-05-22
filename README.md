@@ -3,7 +3,7 @@ This project contains materials for my TDD workshop, "Building Quality JavaScrip
 
 The materials are divided into 6 modules. Start by reading the [Module 0: Setup](./module-0/README.md) instructions. 
 
-If you are unable to complete [Module 0: Setup](./module-0/README.md), please raise your hand (if in-person), or create an issue according to the instructions in [Module 0: Setup](./module-0/README.md) (if not in-person). 
+If you are unable to complete [Module 0: Setup](./module-0/README.md), please raise your hand (if in-person), or create an issue in this repository (if not in-person). 
 
 ## How this workshop works
 
@@ -14,6 +14,8 @@ Each of the main modules (1-5) will follow the same life cycle:
 3. We'll recap our findings as a group. 
 
 Within each module, a pointer finger symbol (👉) indicates instructions which require you to take specific action.
+
+If you have trouble running any of the commands in the modules, see the [Troubleshooting](#troubleshooting) section of this guide.
 
 ## Modules
 
@@ -52,6 +54,16 @@ One great place to introduce TDD into your app is business logic. Business logic
 #### [Module 5c: Fixing Bugs With TDD](./module-5c/README.md)
 
 Another great place to introduce TDD into a project is by fixing bugs. This submodule will show you how to fix bugs with TDD, giving you confidence to introduce it into your projects.
+
+## Troubleshooting
+
+If a command isn't working, use the following checklist to try to identify the problem.
+
+* Did you install Node, NPM, and git? If not, [start here](/module-0/README.md).
+* Are there any error messages in the command window that identify the problem? Take a closer look - sometimes the error messages are there, but surrounded by noise.
+* If you're having trouble with a module that uses the browser, are there any error messages in the JavaScript console? These might help you identify the problem.
+
+If you still can't figure out why things aren't working, raise your hand, or create an issue against this repository.
 
 ## Notes
 
