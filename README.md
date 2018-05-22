@@ -43,15 +43,15 @@ A more complicated problem to give you more TDD experience. We'll work through i
 
 Module 5 will give you experience with applying TDD to real-life problems.
 
-#### [Module 5a: Mocking Dependencies](./module-5ab/README.md)
+#### [Module 5a: Mocking Dependencies](./module-5ab/README.md#module-5a-mocking-dependencies)
 
 Real-life problems aren't always easy to test. This submodule will teach you how to isolate things you can't control.
 
-#### [Module 5b: Writing Business Logic With TDD](./module-5ab/README.md#business-logic)
+#### [Module 5b: Writing Business Logic With TDD](./module-5ab/README.md#module-5b-business-logic)
 
 One great place to introduce TDD into your app is business logic. Business logic is generally less dependent on UI, and can be easier to test in isolation. This submodule gives you practice writing business logic with TDD.
 
-#### [Module 5c: Fixing Bugs With TDD](./module-5c/README.md)
+#### [Module 5c: Fixing Bugs With TDD](./module-5c/README.md#module-5c-fixing-bugs)
 
 Another great place to introduce TDD into a project is by fixing bugs. This submodule will show you how to fix bugs with TDD, giving you confidence to introduce it into your projects.
 

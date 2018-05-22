@@ -12,13 +12,25 @@ For this module, we've got bug reports for our "✨JavaScript Unicorn 🦄 Name 
 
 TDD is useful for fixing bugs. You can write a test that proves the bug exists, and therefore fails, and then fix the bug by making the test pass. 
 
+Note: all of the exercises in this module should be executed in the `module-5c` folder. The `module-1` folder doesn't contain all of the bugs we'll be fixing.
+
+### Start up the tests
+
+👉 Open a new command window from the root of this project. Type `npm run test-module-5c`. This will start up the test suite for this module.
+
+When the test suite starts running, you should see a message that reads 
+
+`No tests found related to files changed since last commit.`
+
 ### Bugs
+
+&#128073; Fix the bugs! First write a test that fails, but proves the bug. Then fix the bug, resulting in a passing test.
 
 #### 1. Lower-case not supported
 
 People who don't use capital letters for their first name, middle name, last name, or birth month are not getting expected results.
 
-&#128073; Write more tests against the name-generator translators, to make sure you are getting the correct names for lower case values provided for first name, middle name, last name, and birth month.
+&#128073; Write more tests against the name-generator translators in the `module-5c/name-generator` folder, to make sure you are getting the correct names for lower case values provided for first name, middle name, last name, and birth month.
 
 #### 2. Error when no middle name is provided
 
