@@ -20,17 +20,6 @@ describe('module-5ab/app/search-form/render-successful-output', () => {
     renderOutput.mockReset();
   });
 
-  // TODO - undo this, and have them write it!!!
-  it('renders a message if there are no results', () => {
-    renderSuccessfulOutput([]);
-
-    const rendered = getArgumentFromLastCall();
-
-    expect(rendered.outerHTML).toLookLike(
-      `<h2 class="warning">No results found</h2>`
-    );
-  });
-
   it('renders a list if there are results', () => {
     // In this test we don't need to provide a fake implementation; we just want to 
     //  "spy" on the original, to see what gets passed to it.

@@ -7,15 +7,23 @@ If you are unable to complete [Module 0: Setup](./module-0/README.md), please ra
 
 ## How this workshop works
 
+### Module Life Cycle
+
 Each of the main modules (1-5) will follow the same life cycle:
 
 1. The instructor will introduce concepts and tools you'll be using for the module. 
 2. You'll work through the module on your own, or with others around you. 
 3. We'll recap our findings as a group. 
 
+### Calls To Action
+
 Within each module, a pointer finger symbol (👉) indicates instructions which require you to take specific action.
 
+### Stuck?
+
 If you have trouble running any of the commands in the modules, see the [Troubleshooting](#troubleshooting) section of this guide.
+
+The code for each module contains a __solutions folder. If you get stuck writing code for any modules, you can look there for inspiration.
 
 ## Modules
 
@@ -31,7 +39,7 @@ An introduction to Jest's interactive watch mode. This module will get you comfo
 
 An instructor-led demonstration of TDD. You'll experience the red-green-refactor feedback loop.
 
-### [Module 3: Code Kata](./module-3/README.md)
+### [Module 3: Code Katas](./module-3/README.md)
 
 A small problem that will help get you in the habit of writing tests first.
 

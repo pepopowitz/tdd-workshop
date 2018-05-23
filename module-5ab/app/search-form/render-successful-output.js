@@ -5,28 +5,10 @@
 import renderOutput from './render-output';
 
 export default function renderSuccessfulOutput(items) {
-  let output;
-
-  // TODO - remove this, and make them write it!
-  if (items.length === 0) {
-    output = generateNoResultsFound();
-  } else {
-    output = generateResults(items);
-  }
+  const output = generateResults(items);
 
   // Here's the call to renderOutput, which does the actual DOM manipulation.
   renderOutput(output);
-}
-
-// TODO - remove this, and make them write it!
-// These other functions are generating DOM elements, but they aren't actually 
-//  manipulating the DOM. 
-function generateNoResultsFound() {
-  let message = document.createElement('h2');
-  message.className = 'warning';
-  message.textContent = 'No results found';
-
-  return message;
 }
 
 // These other functions are generating DOM elements, but they aren't actually 

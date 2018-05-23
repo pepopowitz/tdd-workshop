@@ -64,6 +64,8 @@ Let's go back to the default - running only tests affected by your latest change
 
 You'll see the message again that "no tests were found related to your latest changes." 
 
+## TODO - break a test to see the error output
+
 ## Let's make some changes!
 
 Take a look at the [name generation table](#generation-rules) at the end of this doc. The code is implemented for these rules, but it lacks tests!
