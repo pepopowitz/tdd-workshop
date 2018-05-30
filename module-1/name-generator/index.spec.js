@@ -16,7 +16,7 @@ describe('module-1/name-generator/index', () => {
   it('generates my cat a name', () => {
     const result = generateName({
       firstName: 'Bartleby',
-      middleName: 'Drtleby',
+      middleName: 'Burtleby',
       lastName: 'Turtle',
       birthMonth: 'April',
       birthDate: 8,

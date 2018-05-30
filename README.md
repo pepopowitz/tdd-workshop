@@ -35,7 +35,7 @@ This module will get you set up for the workshop. [Start here!](./module-0/READM
 
 An introduction to Jest's interactive watch mode. This module will get you comfortable with running tests.
 
-### [Module 2: TDD Demo](./module-2/README.md)
+### [Module 2: Intro To Test-Driven Development](./module-2/README.md)
 
 An instructor-led demonstration of TDD. You'll experience the red-green-refactor feedback loop.
 
