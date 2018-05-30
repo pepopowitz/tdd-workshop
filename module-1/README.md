@@ -64,7 +64,41 @@ Let's go back to the default - running only tests affected by your latest change
 
 You'll see the message again that "no tests were found related to your latest changes." 
 
-## TODO - break a test to see the error output
+## Let's break stuff!
+
+Jest gives very helpful feedback when a test fails. Let's break one, to see what it looks like.
+
+👉 Open the file `module-1/name-generator/index.spec.js`. 
+
+In the test named `generates my cat a name`, the `generateName()` function is called with several arguments. It looks like this:
+
+```javascript
+const result = generateName({
+  firstName: 'Potatoes',
+  middleName: 'Burtleby',
+  lastName: 'Turtle',
+  birthMonth: 'April',
+  birthDate: 8,
+});
+```
+
+👉 Change some of the arguments in this call, and save the file.
+
+You should see an error message in your test watch window. Mine looks like this:
+
+![Failed Jest test](./docs/friendly-error.png)
+
+From this output, you should be able to identify the following:
+
+* The file containing the test that failed
+* The name of the test that failed
+* The expected value for the failed assertion
+* The actual value for the failed assertion
+* The line of code where the test failed
+
+👉 Revert your changes.
+
+We want to make sure we have passing tests before moving on. You can revert your changes manually, or through git.
 
 ## Let's make some changes!
 
