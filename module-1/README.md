@@ -8,7 +8,7 @@ The code under test is a "✨JavaScript Unicorn 🦄 Name Generator ✨". The ru
 
 ## Start up the tests
 
-👉 Open a new command window from the root of this project. Type `npm run test-module-1`. This will start up the test suite.
+👉 Open a new command window from the root of this project. Enter `npm run test-module-1`. This will start up the test suite.
 
 When the test suite starts running, it will give you a message that reads 
 
@@ -42,7 +42,7 @@ Jest offers you several options by which to filter your tests:
 
 👉 In the Jest watch window, hit `w`, then `p`. 
 
-👉 Type `birth` to filter by filenames containing `birth`.
+👉 Enter `birth` to filter by filenames containing `birth`.
 
 You should see tests run for `birth-date-translator.js` and `birth-month-translator.js`. All of them should be passing.
 
@@ -52,7 +52,7 @@ You should see tests run for `birth-date-translator.js` and `birth-month-transla
 
 👉 In the Jest watch window, hit `w`, then `t`. 
 
-👉 Type `cat` to filter by test names containing `cat`.
+👉 Enter `cat` to filter by test names containing `cat`.
 
 You should see 2 tests run. All of them contain the word `cat` (though Jest doesn't make that very clear).
 
@@ -66,7 +66,7 @@ You'll see the message again that "no tests were found related to your latest ch
 
 ## Let's break stuff!
 
-Jest gives very helpful feedback when a test fails. Let's break one, to see what it looks like.
+Jest gives helpful feedback when a test fails. Let's break a test, to see what it looks like.
 
 👉 Open the file `module-1/name-generator/index.spec.js`. 
 

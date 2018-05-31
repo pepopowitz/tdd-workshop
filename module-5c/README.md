@@ -40,7 +40,7 @@ People who don't use capital letters for their first name, middle name, last nam
 
 #### 3. Full month-names are required
 
-Someone tried calling our unicorn-name-generator api with 'Jan' instead of 'January', and got an error. 
+Someone tried calling our unicorn-name-generator api with 'Feb' instead of 'February', and didn't get "Wielder of". 
 
 We should probably support month abbreviations.
 
@@ -52,7 +52,7 @@ We probably should also support lowercase month names/abbreviations, if we aren'
 
 #### 4. Zeke gets the wrong name
 
-According to the table, a user named Zeke get Dashing, but we got a report that he is getting Piercing instead. 
+According to the table, a user named Zeke should get Dashing, but we got a report that he is getting Piercing instead. 
 
 &#128073; Write a test against the first-name-translator for Zeke. Find & fix the bug, resulting in a passing test.
 
