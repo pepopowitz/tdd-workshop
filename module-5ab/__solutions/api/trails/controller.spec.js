@@ -4,76 +4,76 @@ import trailData from '../trail-data';
 
 describe('module-5ab/api/trails/controller', () => {
   function aMockResponse() {
-    return {
-      json: jest.fn(),
-    };
+    //... no changes
   }
 
   function getLastCallArgs(mockResponse) {
-    if (mockResponse.json.mock.calls.length === 0) {
-      return undefined;
-    }
-
-    return mockResponse.json.mock.calls[
-      mockResponse.json.mock.calls.length - 1
-    ][0];
+    //... no changes
   }
 
   it('returns all trails with no criteria', () => {
-    const mockResponse = aMockResponse();
-    const request = {
-      query: {},
-    };
-
-    controller.get(request, mockResponse);
-
-    expect(mockResponse.json).toHaveBeenCalledTimes(1);
-
-    const lastCall =
-      mockResponse.json.mock.calls[mockResponse.json.mock.calls.length - 1];
-    expect(lastCall[0].length).toEqual(trailData.length);
+    //... no changes
   });
 
   it('filters by sport', () => {
-    const mockResponse = aMockResponse();
-    const request = {
-      query: {
-        sport: 'Cycling',
-      },
-    };
-
-    controller.get(request, mockResponse);
-
-    const lastCallArgs = getLastCallArgs(mockResponse);
-
-    expect(lastCallArgs.length).toEqual(5);
-    // This is one way I can verify that it contains a trail that I know should be there.
-    expect(lastCallArgs).toContainEqual({
-      name: 'Oak Leaf',
-      distance: 17.0,
-      sport: 'Cycling',
-      hills: 'Easy',
-    });
+    //... no changes
   });
 
   it('filters by hills', () => {
-    const mockResponse = aMockResponse();
-    const request = {
-      query: {
-        hills: 'Hard',
-      },
-    };
-
-    controller.get(request, mockResponse);
-
-    const lastCallArgs = getLastCallArgs(mockResponse);
-
-    expect(lastCallArgs.length).toEqual(6);
-    // This is another way I can verify that it contains a trail that I know should be there.
-    expect(lastCallArgs.some(x => x.name === 'Alpine Valley')).toBe(true);
+    //... no changes
   });
 
-  describe('distance filter', () => {
-    //TODO  - fill in! (and delete the junk above this)
-  })
+  // SOLUTION!
+  describe('filters by distance', () => {
+    it('returns trails within a mile when distance is less than 10', () => {
+      const mockResponse = aMockResponse();
+
+      const request = {
+        query: {
+          distance: 3,
+        },
+      };
+
+      controller.get(request, mockResponse);
+
+      const lastCallArgs = getLastCallArgs(mockResponse);
+
+      expect(lastCallArgs.length).toEqual(7);
+      expect(lastCallArgs.some(x => x.name === 'Scuppernong 5k')).toBe(true);
+    });
+
+    it('returns trails within 2 miles when distance is between 10 and 20', () => {
+      const mockResponse = aMockResponse();
+
+      const request = {
+        query: {
+          distance: 16,
+        },
+      };
+
+      controller.get(request, mockResponse);
+
+      const lastCallArgs = getLastCallArgs(mockResponse);
+
+      expect(lastCallArgs.length).toEqual(2);
+      expect(lastCallArgs.some(x => x.name === 'New Berlin Trail')).toBe(true);
+    });
+
+    it('returns trails within 3 miles when distance is more than 20', () => {
+      const mockResponse = aMockResponse();
+
+      const request = {
+        query: {
+          distance: 23,
+        },
+      };
+
+      controller.get(request, mockResponse);
+
+      const lastCallArgs = getLastCallArgs(mockResponse);
+
+      expect(lastCallArgs.length).toEqual(3);
+      expect(lastCallArgs.some(x => x.name === 'Devils Lake')).toBe(true);
+    });
+  });
 });

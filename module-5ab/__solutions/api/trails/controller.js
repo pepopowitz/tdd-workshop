@@ -7,6 +7,8 @@ export default {
     if (req.query){
       results = maybeFilterBySport(results, req.query.sport);
       results = maybeFilterByHills(results, req.query.hills);
+      // SOLUTION!
+      results = maybeFilterByDistance(results, req.query.distance);
     }
 
     response.json(results);
@@ -14,15 +16,28 @@ export default {
 };
 
 function maybeFilterBySport(results, querySport) {
-  if (querySport) {
-    return results.filter(x => x.sport === querySport);
+  //... no changes
+}
+
+function maybeFilterByHills(results, queryHills) {
+  //... no changes
+}
+
+// SOLUTION FROM HERE TO END!
+function maybeFilterByDistance(results, queryDistance) {
+  if (queryDistance) {
+    const { min, max } = getMinMaxDistance(queryDistance);
+    return results.filter(x => x.distance <= max && x.distance >= min);
   }
   return results;
 }
 
-function maybeFilterByHills(results, queryHills) {
-  if (queryHills) {
-    return results.filter(x => x.hills === queryHills);
+function getMinMaxDistance(queryDistance) {
+  if (queryDistance < 10) {
+    return { min: queryDistance - 1, max: queryDistance + 1 };
   }
-  return results;
+  if (queryDistance < 20) {
+    return { min: queryDistance - 2, max: queryDistance + 2 };
+  }
+  return { min: queryDistance - 3, max: queryDistance + 3 };
 }

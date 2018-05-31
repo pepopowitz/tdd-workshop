@@ -18,7 +18,7 @@ Trails have a name, sport, hill difficulty, and distance associated with them. U
 
 ### Start up the app
 
-&#128073; Open a command window from the root of this project, and type `npm run serve-module-5ab`. This should open a browser window at localhost:8080. You should see a search form with three fields.
+&#128073; Open a command window from the root of this project, and run `npm run serve-module-5ab`. This should open a browser window at localhost:8080. You should see a search form with three fields.
 
 &#128073; Click the 'Find some trails!' button. You should see results!
 
@@ -26,7 +26,7 @@ Trails have a name, sport, hill difficulty, and distance associated with them. U
 
 ### Start up the tests
 
-&#128073; From another command window at the root of this project, type `npm run test-module-5ab`. This will start up the test suite for this module.
+&#128073; From another command window at the root of this project, run `npm run test-module-5ab`. This will start up the test suite for this module.
 
 At this point, no tests should run, and you should see this message: 
 
@@ -85,13 +85,13 @@ Our app UI has the ability to filter by distance, but our API isn't actually doi
 
 If you stopped running the app after the [Mocking Dependencies submodule](#mocking-dependencies), re-start it.
 
-&#128073; Open a command window from the root of this project, and type `npm run serve-module-5ab`. This should open a browser window at localhost:8080. You should see a familiar search form.
+&#128073; Open a command window from the root of this project, and run `npm run serve-module-5ab`. This should open a browser window at localhost:8080. You should see a familiar search form.
 
 ### Start up the tests
 
 If you stopped the tests after the [Mocking Dependencies submodule](#mocking-dependencies), re-start them.
 
-&#128073; From another command window at the root of this project, type `npm run test-module-5ab`. This will start up the test suite for this module.
+&#128073; From another command window at the root of this project, run `npm run test-module-5ab`. This will start up the test suite for this module.
 
 ### Experience the missing feature
 
@@ -109,7 +109,7 @@ Depending on the value, the range of results will vary.
 
 * If the distance is less than 10, it should return trails within a mile of the value passed in. For example, if the value passed in is 3, it should return results from 2 to 4 miles long.
 * If the distance is more than 10 but less than 20, it should return trails within 2 miles of the value passed in. For example, if the value passed in is 15, we should see results from 13 to 17 miles long.
-* If the distance is more than 20, it should rturn trails within 3 miles of the value passed in. For example, if the value passed in is 24, we should see results from 21 - 27 miles long.
+* If the distance is more than 20, it should return trails within 3 miles of the value passed in. For example, if the value passed in is 24, we should see results from 21 - 27 miles long.
 
 **Hint**: You'll be implementing this feature in the `/module-5ab/api/trails/controller.js` file.
 
