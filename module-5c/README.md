@@ -26,17 +26,17 @@ When the test suite starts running, you should see a message that reads
 
 &#128073; Fix the bugs! First write a test that fails, but proves the bug. Then fix the bug, resulting in a passing test.
 
-#### 1. Lower-case not supported
-
-People who don't use capital letters for their first name, middle name, last name, or birth month are not getting expected results.
-
-&#128073; Write more tests against the name-generator translators in the `module-5c/name-generator` folder, to make sure you are getting the correct names for lower case values provided for first name, middle name, last name, and birth month.
-
-#### 2. Error when no middle name is provided
+#### 1. Error when no middle name is provided
 
 People who don't have middle names are getting an error. We don't want to exclude them!
 
 &#128073; Write a test for a person with no middle name, and make it pass.
+
+#### 2. Lower-case not supported
+
+People who don't use capital letters for their first name, middle name, last name, or birth month are not getting expected results.
+
+&#128073; Write more tests against the name-generator translators in the `module-5c/name-generator` folder, to make sure you are getting the correct names for lower case values provided for first name, middle name, last name, and birth month.
 
 #### 3. Full month-names are required
 
