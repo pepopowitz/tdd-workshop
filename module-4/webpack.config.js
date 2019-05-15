@@ -10,13 +10,13 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: './dist',
-    open: true
+    open: true,
   },
   mode: 'development',
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Conway\'s Game Of Life',
+      title: "Conway's Game Of Life",
     }),
   ],
   output: {
@@ -35,10 +35,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['babel-preset-env']
-          }
-        }
-      }
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
     ],
   },
 };
