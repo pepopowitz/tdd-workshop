@@ -4,7 +4,7 @@
   "description": "Materials for the workshop \"Building Quality JavaScript With Test-Driven Development\", by Steven J Hicks.",
   "private": true,
   "scripts": {
-    "verify": "node ./module-0/verify.js",
+    "verify": "node ./module-0/verify.js && jest -i --config ./module-0/jest.config.js",
     "test": "jest",
     "test-watch-all": "jest --watch",
     "test-module-1": "jest --watch -i --config ./module-1/jest.config.js",

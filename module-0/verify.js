@@ -1,7 +1,7 @@
 const _ = require('lodash');
 
 if (_ !== undefined) {
-  console.log('You\'re all set!');
+  console.log('Dependencies are set up!');
 } else {
-  console.log('Something\'s not right.');
+  console.log("Something's not right.");
 }
