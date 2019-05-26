@@ -1,5 +1,4 @@
 module.exports = {
-  displayName: 'module-3',
-  modulePaths: ['<rootDir>/src', '<rootDir>/test'],
+  displayName: 'module-4ab',
   testPathIgnorePatterns: ['../node_modules', '../.git', './__solutions'],
 };
