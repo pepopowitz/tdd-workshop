@@ -24,7 +24,7 @@ Within each module, a pointer finger symbol (👉) indicates instructions which 
 
 If you have trouble running any of the commands in the modules, see the [Troubleshooting](#troubleshooting) section of this guide.
 
-The code for each module contains a \_\_solutions folder. If you get stuck writing code for any modules, you can look there for inspiration.
+The code for most modules contains a \_\_solutions folder. If you get stuck writing code for any modules, you can look there for inspiration.
 
 ## Modules
 
