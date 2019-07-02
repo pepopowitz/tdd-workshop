@@ -1,18 +1,20 @@
 # Module 3: Code Katas
 
-This module will help get you in the habit of writing tests first. 
+This module will help get you in the habit of writing tests first.
 
 ## Background
 
-A *code kata* is a programming exercise in which a developer attempts to solve a pre-defined problem, to hone their skills.
+A _code kata_ is a programming exercise in which a developer attempts to solve a pre-defined problem, to hone their skills.
 
-Code katas are generally not real-world problems. They have well-defined specifications and rules. 
+Code katas are generally not real-world problems. They have well-defined specifications and rules.
 
 Code katas are more about developing a practice, and less about solving the underlying problems. Katas are intended to help you build a testing habit. The more you practice TDD on sample problems, the sooner TDD becomes your default approach to real problems.
 
 ## Ground Rules
-* No code without tests
-* Do one task at a time; try not to read ahead
+
+- Don't write new code without writing a test first
+- Do one task at a time; try not to read ahead
+- You are welcome to pair with others on this exercise!
 
 ## Let's Play!
 
@@ -22,7 +24,7 @@ Currently, there is one test, named `it('exists'...)`. This test simply verifies
 
 Depending on your level of dogma, it is either very important to create a test that verifies the existence of a function before you write it, or very unimportant.
 
-&#128073; Take a look at the `module-3/add.js` test file. This is where you'll be implementing your string calculator/add function. 
+&#128073; Take a look at the `module-3/add.js` test file. This is where you'll be implementing your string calculator/add function.
 
 Currently, you'll see that the function in `add.js` is returning `undefined`.
 
@@ -30,15 +32,15 @@ Currently, you'll see that the function in `add.js` is returning `undefined`.
 
 From a command line at the root of the workshop project, type `npm run test-module-3`. This will start up the test suite.
 
-At this point, no tests should run, and you should see this message: 
+At this point, no tests should run, and you should see this message:
 
 `No tests found related to files changed since last commit.`
 
 &#128073; Start implementing the specifications!
 
-### The String Calculator kata 
+### The String Calculator kata
 
-This kata builds a function that takes numbers in as string input, and returns their sum. It emphasizes refactoring. 
+This kata builds a function that takes numbers in as string input, and returns their sum. It emphasizes refactoring.
 
 The kata is adapted from [http://osherove.com/tdd-kata-1](http://osherove.com/tdd-kata-1).
 
@@ -58,13 +60,13 @@ For an empty string the function should return 0.
 
 For strings with 1 or 2 numbers, the function should return the sum of the numbers.
 
-##### Suggestions: 
+##### Suggestions:
 
-* Start with the simplest test case of an empty string and move to 1 and 2 numbers
+- Start with the simplest test case of an empty string and move to 1 and 2 numbers
 
-* Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
+- Remember to solve things as simply as possible so that you force yourself to write tests you did not think about
 
-* Remember to refactor after each passing test
+- Remember to refactor after each passing test
 
 #### 3. Allow the add function to handle an unknown amount of numbers, separated by commas
 
@@ -76,7 +78,7 @@ The following input is NOT ok:  “1,\n” (You don't need to write a test for
 
 #### 5. Support different delimiters
 
-To specify a delimiter, the string will begin with two slashes, then the delimiter, then a new line. 
+To specify a delimiter, the string will begin with two slashes, then the delimiter, then a new line.
 
 For example, the input “//;\n1;2” should return three. "//;\n" specifies that the delimiter is ";", and "1;2" should be added together.
 
@@ -84,7 +86,6 @@ The delimiter specification is optional. All previously existing scenarios shoul
 
 #### 6. Calling add with a negative number should throw an error with the message “Negatives not allowed: X”, where X is the negative value passed.
 
-If there are multiple negatives, show all of them in the error message. 
+If there are multiple negatives, show all of them in the error message.
 
 For example, the input "1,-1,-4" should throw the error "Negatives not allowed: -1, -4".
-
