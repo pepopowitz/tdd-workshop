@@ -1,5 +1,3 @@
-// TODO - undo this, and have them write it!!!
-
 import renderOutput from './render-output';
 
 export default function renderErroneousOutput(error) {

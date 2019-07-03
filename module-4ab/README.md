@@ -54,27 +54,9 @@ Notice that there are no results on the page, but also no indication that it did
 
 **Hint**: You'll write your tests in the `module-4ab/app/search-form/render-successful-output.spec.js` file. The existing test named `it('renders a list if there are results')` is a good example to look at.
 
-**Hint**: Everything you need to implement this feature can already be found in the renderSuccessfulOutput function & tests.
+**Hint**: Everything you need to implement this feature can already be found in the renderSuccessfulOutput function & tests. You might also find the renderErroneousOutput function & tests useful.
 
 If you get stuck on this feature, see [`./__solutions/app/search-form/render-successful-output.js`](./__solutions/app/search-form/render-successful-output.js) and [`./__solutions/app/search-form/render-successful-output.spec.js`](./__solutions/app/search-form/render-successful-output.spec.js) for a possible solution.
-
-#### When the API throws an error, we should show a message that says "Something went wrong."
-
-We can't recreate this in the app at the moment, but we've been told that the API sometimes returns an error. We should probably account for this possibility, and add a message that indicates when something went wrong.
-
-We've already stubbed this function out - our orchestration tests verified that when an error occurred, we would call a function named `renderErroneousOutput`, imported from `render-erroneous-output.js`.
-
-This function doesn't actually do what we need it to do, though.
-
-👉 Implement a feature, using TDD, such that when the API throws an error, the user sees a message that says "Something went wrong.".
-
-**Hint**: You'll implement this logic in the `module-4ab/app/search-form/render-erroneous-output.js` file.
-
-**Hint**: You'll write your tests in the `module-4ab/app/search-form/render-erroneous-output.spec.js` file.
-
-**Hint**: Everything you need to implement this feature can be found in the renderErroneousOutput function & tests.
-
-If you get stuck on this feature, see [`./__solutions/app/search-form/render-erroneous-output.js`](./__solutions/app/search-form/render-erroneous-output.js) and [`./__solutions/app/search-form/render-erroneous-output.spec.js`](./__solutions/app/search-form/render-erroneous-output.spec.js) for a possible solution.
 
 ## Module 4b: Business Logic
 
