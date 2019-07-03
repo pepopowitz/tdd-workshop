@@ -18,17 +18,17 @@ Code katas are more about developing a practice, and less about solving the unde
 
 ## Let's Play!
 
-&#128073; Take a look at the `module-3/add.spec.js` test file. This is where you'll be writing your tests for this exercise.
+👉 Take a look at the `module-3/add.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
 Currently, there is one test, named `it('exists'...)`. This test simply verifies that the `add` function exists.
 
 Depending on your level of dogma, it is either very important to create a test that verifies the existence of a function before you write it, or very unimportant.
 
-&#128073; Take a look at the `module-3/add.js` test file. This is where you'll be implementing your string calculator/add function.
+👉 Take a look at the `module-3/add.js` test file. This is where you'll be implementing your string calculator/add function.
 
 Currently, you'll see that the function in `add.js` is returning `undefined`.
 
-&#128073; Start up the test suite.
+👉 Start up the test suite.
 
 From a command line at the root of the workshop project, type `npm run test-module-3`. This will start up the test suite.
 
@@ -36,7 +36,7 @@ At this point, no tests should run, and you should see this message:
 
 `No tests found related to files changed since last commit.`
 
-&#128073; Start implementing the specifications!
+👉 Start implementing the specifications!
 
 ### The String Calculator kata
 

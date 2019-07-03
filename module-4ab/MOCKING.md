@@ -22,7 +22,7 @@ To familiarize you with mocking in TDD, let's look at some examples in the code.
 
 ### `module-4ab/app/search-form/index.js`
 
-&#128073; Open the `module-4ab/app/search-form/index.js` file.
+👉 Open the `module-4ab/app/search-form/index.js` file.
 
 There are no tests against this function. This function is the entry-point into our 'search-form' app. It connects our "search-form" code to the DOM element.
 
@@ -32,7 +32,7 @@ Specifically, this function connects the search form in the DOM to a `handleSubm
 
 ### `module-4ab/app/search-form/handle-submit.js`
 
-&#128073; Open the `module-4ab/app/search-form/handle-submit.js` file.
+👉 Open the `module-4ab/app/search-form/handle-submit.js` file.
 
 The `handleSubmit` function is an "orchestrator." It doesn't really "do" much, except call other functions in the appropriate sequence.
 
@@ -40,7 +40,7 @@ When I built this function, I knew I needed to do two things - call the API to g
 
 ### `module-4ab/app/search-form/handle-submit.spec.js`
 
-&#128073; Open the `module-4ab/app/search-form/handle-submit.spec.js` file.
+👉 Open the `module-4ab/app/search-form/handle-submit.spec.js` file.
 
 The tests for `handleSubmit` utilize mocking to "fake" the difficult things that I wanted to procrastinate - `callApi`, `renderSuccessfulOutput`, and `renderErroneousOutput`.
 
@@ -128,7 +128,7 @@ expect(e.preventDefault).toHaveBeenCalledTimes(1);
 
 ### `module-4ab/app/search-form/call-api.js`
 
-&#128073; Open the `module-4ab/app/search-form/call-api.js` file.
+👉 Open the `module-4ab/app/search-form/call-api.js` file.
 
 The callApi function is one of the functions I mocked in my orchestration tests.
 
@@ -138,7 +138,7 @@ To test-drive this method, I mocked out the call to `axios.get`. Let's see how, 
 
 ### `module-4ab/app/search-form/call-api.spec.js`
 
-&#128073; Open the `module-4ab/app/search-form/call-api.spec.js` file.
+👉 Open the `module-4ab/app/search-form/call-api.spec.js` file.
 
 There isn't much different in `call-api.spec.js` than we saw in `handle-submit.spec.js`. We take the same five actions with our mock, in this case a mock of the `axios` library:
 
@@ -150,7 +150,7 @@ There isn't much different in `call-api.spec.js` than we saw in `handle-submit.s
 
 ### `module-4ab/app/search-form/render-successful-output.js`
 
-&#128073; Open the `module-4ab/app/search-form/render-successful-output.js` file.
+👉 Open the `module-4ab/app/search-form/render-successful-output.js` file.
 
 The renderSuccessfulOutput function is another of the functions I mocked in my orchestration tests.
 
@@ -158,7 +158,7 @@ This function would have some interaction with the DOM, but I isolated that DOM 
 
 ### `module-4ab/app/search-form/render-successful-output.spec.js`
 
-&#128073; Open the `module-4ab/app/search-form/render-successful-output.spec.js` file.
+👉 Open the `module-4ab/app/search-form/render-successful-output.spec.js` file.
 
 Most of these tests should look familiar. In this case, we don't actually need to provide a fake implementation for the tests - so we have four of our usual actions against a mock, in this case of `renderOutput`:
 

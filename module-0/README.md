@@ -19,7 +19,7 @@ If you already have a git client installed, you're covered for #1.
 
 For #2, you'll need to make sure you can access git from a terminal/command line.
 
-&#128073; To verify this, open a terminal window. Run the following command:
+👉 To verify this, open a terminal window. Run the following command:
 
 `git --version`
 
@@ -29,21 +29,21 @@ If you don't see a version listed, or an error that says something to the effect
 
 #### I need to install git
 
-&#128073; If you think you need to install git, [go here](https://git-scm.com/downloads). If the installer asks if you want to add git to your path/environment variables, say yes!
+👉 If you think you need to install git, [go here](https://git-scm.com/downloads). If the installer asks if you want to add git to your path/environment variables, say yes!
 
 #### I already installed git but `git -v` doesn't work
 
 This probably means git wasn't added to your path/environment variables, so your terminal can't find it. You have a couple options.
 
-&#128073; 1. Run the "git bash" terminal for the workshop instead of the one you usually use.
+👉 1. Run the "git bash" terminal for the workshop instead of the one you usually use.
 
-&#128073; 2. Add git to your path/environment variables.
+👉 2. Add git to your path/environment variables.
 
 Option 2 is a little more complicated. If you don't know how to do it already, you'll likely need to search the internet to find out how.
 
 ### 2. NodeJS
 
-&#128073; From your terminal/command line, run the following command:
+👉 From your terminal/command line, run the following command:
 
 `node -v`
 
@@ -51,19 +51,19 @@ You should see a version number, and the version number should be at least 8.9.0
 
 #### I see a version number, and it is at least 8.9.0!
 
-&#128073; Sweet! You can move on to [verifying that you have NPM installed](#3-npm).
+👉 Sweet! You can move on to [verifying that you have NPM installed](#3-npm).
 
 #### I see a version number, but it is less than 8.9.0.
 
 There's a chance that things could be fine, but you might want to upgrade your version of Node just to be safe.
 
-&#128073; If you're using a Node version manager, you probably know how to upgrade your version of Node. It's probably a matter of installing a newer version via a command like `nvm install v8.9.4`.
+👉 If you're using a Node version manager, you probably know how to upgrade your version of Node. It's probably a matter of installing a newer version via a command like `nvm install v8.9.4`.
 
-&#128073; If you aren't using a Node version manager, you'll want to grab the LTS installer from [NodeJS.org](https://nodejs.org/en/). If it asks you to also install NPM, say yes!
+👉 If you aren't using a Node version manager, you'll want to grab the LTS installer from [NodeJS.org](https://nodejs.org/en/). If it asks you to also install NPM, say yes!
 
 #### I don't see a version number.
 
-&#128073; You need to install NodeJS.
+👉 You need to install NodeJS.
 
 I recommend using a Node version manager - this will allow you to install multiple versions of Node locally, and switch between them. This is especially helpful if you're attending multiple workshops, as different sessions might require different versions. If you're on Mac/Linux, I recommend [NVM](https://github.com/creationix/nvm). If you're on Windows, I recommend [nvm-windows](https://github.com/coreybutler/nvm-windows).
 
@@ -71,7 +71,7 @@ If you'd prefer to just install one version of Node, that's fine too. You can gr
 
 ### 3. NPM
 
-&#128073; Most likely, NPM was installed when you installed NodeJS. You can verify this by checking for a version in your terminal/command line.
+👉 Most likely, NPM was installed when you installed NodeJS. You can verify this by checking for a version in your terminal/command line.
 
 `npm -v`
 
@@ -79,19 +79,19 @@ You should see a version number, and the version number should be at least 5.5.1
 
 #### I see a version number, and the version number is at least 5.5.1!
 
-&#128073; Congratulations! You're ready to [clone this repository](#clone-this-repository)!
+👉 Congratulations! You're ready to [clone this repository](#clone-this-repository)!
 
 #### I see a version number, but it is less than 5.5.1.
 
-&#128073; You need to upgrade NVM. You can read about it [here](https://docs.npmjs.com/getting-started/installing-node#install-npm--manage-npm-versions).
+👉 You need to upgrade NVM. You can read about it [here](https://docs.npmjs.com/getting-started/installing-node#install-npm--manage-npm-versions).
 
 #### I don't see a version number.
 
-&#128073; You need to install NPM. You can read about it [here](https://docs.npmjs.com/getting-started/installing-node#install-npm--manage-npm-versions).
+👉 You need to install NPM. You can read about it [here](https://docs.npmjs.com/getting-started/installing-node#install-npm--manage-npm-versions).
 
 ## Clone This Repository
 
-&#128073; Clone this repository using your git client!
+👉 Clone this repository using your git client!
 
 The repository URL is https://github.com/pepopowitz/tdd-workshop.git. If you've never done this before, you want to go into your terminal and type...
 
@@ -101,7 +101,7 @@ This will clone the repository into your current working directory.
 
 ## Install Dependencies
 
-&#128073; Once the repository is cloned, enter that directory in your terminal, and run
+👉 Once the repository is cloned, enter that directory in your terminal, and run
 
 `npm install`
 
@@ -109,7 +109,7 @@ This will clone the repository into your current working directory.
 
 I've included a simple test to make sure everything seems to be installed correctly.
 
-&#128073; From your terminal, run
+👉 From your terminal, run
 
 `npm run verify`.
 

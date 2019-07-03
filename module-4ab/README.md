@@ -18,15 +18,15 @@ Trails have a name, sport, hill difficulty, and distance associated with them. U
 
 ### Start up the app
 
-&#128073; Open a command window from the root of this project, and run `npm run serve-module-4ab`. This should open a browser window at localhost:8080. You should see a search form with three fields.
+👉 Open a command window from the root of this project, and run `npm run serve-module-4ab`. This should open a browser window at localhost:8080. You should see a search form with three fields.
 
-&#128073; Click the 'Find some trails!' button. You should see results!
+👉 Click the 'Find some trails!' button. You should see results!
 
-&#128073; Select a sport from the 'Sport' dropdown. Click the 'Find some trails!' button. You should see fewer results!
+👉 Select a sport from the 'Sport' dropdown. Click the 'Find some trails!' button. You should see fewer results!
 
 ### Start up the tests
 
-&#128073; From another command window at the root of this project, run `npm run test-module-4ab`. This will start up the test suite for this module.
+👉 From another command window at the root of this project, run `npm run test-module-4ab`. This will start up the test suite for this module.
 
 At this point, no tests should run, and you should see this message:
 
@@ -44,11 +44,11 @@ There are a couple scenarios we want to account for in our search-form.
 
 #### When the API returns no results, we should show a message that says "No results found."
 
-&#128073; In the app, select "Cycling" and "Medium" from the Sport and Hills dropdowns. Click the 'Find some trails!' button.
+👉 In the app, select "Cycling" and "Medium" from the Sport and Hills dropdowns. Click the 'Find some trails!' button.
 
 Notice that there are no results on the page, but also no indication that it didn't return results. We'll want to add a message indicating that no results were found.
 
-&#128073; Implement a feature, using TDD, such that an empty search shows a message that reads "No results found".
+👉 Implement a feature, using TDD, such that an empty search shows a message that reads "No results found".
 
 **Hint**: You'll implement this logic in the `module-4ab/app/search-form/render-successful-output.js` file.
 
@@ -66,7 +66,7 @@ We've already stubbed this function out - our orchestration tests verified that 
 
 This function doesn't actually do what we need it to do, though.
 
-&#128073; Implement a feature, using TDD, such that when the API throws an error, the user sees a message that says "Something went wrong.".
+👉 Implement a feature, using TDD, such that when the API throws an error, the user sees a message that says "Something went wrong.".
 
 **Hint**: You'll implement this logic in the `module-4ab/app/search-form/render-erroneous-output.js` file.
 
@@ -92,23 +92,23 @@ Our app UI has the ability to filter by distance, but our API isn't actually doi
 
 If you stopped running the app after the [Mocking Dependencies submodule](#mocking-dependencies), re-start it.
 
-&#128073; Open a command window from the root of this project, and run `npm run serve-module-4ab`. This should open a browser window at localhost:8080. You should see a familiar search form.
+👉 Open a command window from the root of this project, and run `npm run serve-module-4ab`. This should open a browser window at localhost:8080. You should see a familiar search form.
 
 ### Start up the tests
 
 If you stopped the tests after the [Mocking Dependencies submodule](#mocking-dependencies), re-start them.
 
-&#128073; From another command window at the root of this project, run `npm run test-module-4ab`. This will start up the test suite for this module.
+👉 From another command window at the root of this project, run `npm run test-module-4ab`. This will start up the test suite for this module.
 
 ### Experience the missing feature
 
-&#128073; In the app, enter a distance of '5'. Click the 'Find some trails!' button.
+👉 In the app, enter a distance of '5'. Click the 'Find some trails!' button.
 
 You would expect the results to be filtered by distance, but they aren't. This is because we haven't implemented this feature yet.
 
 ### Implement the missing feature
 
-&#128073; Implement a feature to support the `distance` parameter being passed into our trails API controller.
+👉 Implement a feature to support the `distance` parameter being passed into our trails API controller.
 
 We get a query parameter passed into the api for handling distances. It's named 'distance', and it contains a number that reflects the approximate number of miles we want to search for.
 

@@ -24,19 +24,19 @@ When the test suite starts running, you should see a message that reads
 
 ### Bugs
 
-&#128073; Fix the bugs! First write a test that fails, but proves the bug. Then fix the bug, resulting in a passing test.
+👉 Fix the bugs! First write a test that fails, but proves the bug. Then fix the bug, resulting in a passing test.
 
 #### 1. Error when no middle name is provided
 
 People who don't have middle names are getting an error. We don't want to exclude them!
 
-&#128073; Write a test for a person with no middle name, and make it pass.
+👉 Write a test for a person with no middle name, and make it pass.
 
 #### 2. Lower-case not supported
 
 People who don't use capital letters for their first name, middle name, last name, or birth month are not getting expected results.
 
-&#128073; Write more tests against the name-generator translators in the `module-4c/name-generator` folder, to make sure you are getting the correct names for lower case values provided for first name, middle name, last name, and birth month.
+👉 Write more tests against the name-generator translators in the `module-4c/name-generator` folder, to make sure you are getting the correct names for lower case values provided for first name, middle name, last name, and birth month.
 
 #### 3. Full month-names are required
 
@@ -44,17 +44,17 @@ Someone tried calling our unicorn-name-generator api with 'Feb' instead of 'Febr
 
 We should probably support month abbreviations.
 
-&#128073; Write some tests that use abbreviations for month names, and make them pass.
+👉 Write some tests that use abbreviations for month names, and make them pass.
 
 We probably should also support lowercase month names/abbreviations, if we aren't already.
 
-&#128073; Write tests to support lowercase month abbreviations, and make them pass if they don't already.
+👉 Write tests to support lowercase month abbreviations, and make them pass if they don't already.
 
 #### 4. Zeke gets the wrong name
 
 According to the table, a user named Zeke should get Dashing, but we got a report that he is getting Piercing instead.
 
-&#128073; Write a test against the first-name-translator for Zeke. Find & fix the bug, resulting in a passing test.
+👉 Write a test against the first-name-translator for Zeke. Find & fix the bug, resulting in a passing test.
 
 #### 5. Alex Puccio gets the wrong name
 
@@ -62,9 +62,9 @@ Alex Puccio calls to tell us she's getting the wrong name. We tell her that can'
 
 Look again [at the generation rule table](#generation-rules). We're generating the wrong name for her.
 
-&#128073; Correct the name in the test. This will result in a failing test.
+👉 Correct the name in the test. This will result in a failing test.
 
-&#128073; Figure out why her test was incorrectly passing. Correct the behavior, so that the updated test passes.
+👉 Figure out why her test was incorrectly passing. Correct the behavior, so that the updated test passes.
 
 Tests aren't infallible. Sometimes we get them wrong, and in doing so, we miss bugs. Test-Driven Development can't help you escape bugs, but it can help you document requirements exactly as you understand them.
 
