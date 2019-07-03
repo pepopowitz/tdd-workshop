@@ -127,7 +127,17 @@ Tests:       1 passed, 1 total
 Snapshots:   0 total
 Time:        0.859s, estimated 1s
 Ran all test suites.
+
+Watch Usage
+ › Press f to run only failed tests.
+ › Press o to only run tests related to changed files.
+ › Press p to filter by a filename regex pattern.
+ › Press t to filter by a test name regex pattern.
+ › Press q to quit watch mode.
+ › Press Enter to trigger a test run.
 ```
+
+👉 Press `q` to quit the verification step.
 
 ## Common issues
 
