@@ -28,9 +28,9 @@ This is a randomized starting state for the Game Of Life. We're using a 40x40 gr
 
 Every cell in the grid can be in one of two states: alive or dead. The alive cells show as green, the dead cells are gray.
 
-The game advances one tick at a time. For every tick, each cell will determine its next state based on its 8 neighbors.
+The game advances one tick at a time. Each tick takes about half a second. For every tick, each cell will determine its next state based on its 8 neighbors.
 
-👉 Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to randomly replace the previous state. You'll be using TDD to correct this!
+👉 Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to randomly replace the previous state. You'll use TDD to remove the randomness!
 
 👉 Hit the "Stop" button. The green cells should stop dancing. You may have to click more than once to make them stop.
 
@@ -38,15 +38,15 @@ There's no actual reason you need to stop the game - the "Stop" button is there 
 
 ## Ground Rules
 
-### Don't write new code without writing a test first
+### 1. Don't write new code without writing a test first
 
-### Take turns
+### 2. Take turns
 
 You'll be taking turns writing tests and making them pass, and working together to refactor along the way.
 
-### Collaborate to define the test cases
+### 3. Collaborate to define the test cases
 
-### When you are typing, you decide the code that is written
+### 4. When you are typing, you decide the code that is written
 
 You may ask for the other’s opinion, but the other may not force you to write the code a certain way.
 
@@ -68,6 +68,8 @@ For example, this is a representation of a 3x3 grid, where only the middle cell 
 ]
 ```
 
+Note that this example also shows all 8 neighbors of the middle cell.
+
 👉 Take a look at the `module-5/get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
 
 Currently you'll see that `getNextState` is returning 40 dummy rows. Each dummy row returns 40 randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly.
@@ -82,7 +84,7 @@ At this point, no tests should run, and you should see this message:
 
 `No tests found related to files changed since last commit.`
 
-👉 Start implementing the specifications!
+## The workflow
 
 Your collaboration workflow will look like this:
 
@@ -95,6 +97,8 @@ Your collaboration workflow will look like this:
 - Repeat
 
 ## Specifications
+
+It might help to read the [Suggestions](#suggestions) below before implementing the specifications.
 
 #### 0. Begin with a random "seed" or starting sequence. For each "tick" of the game, return the next state based on the current state.
 
@@ -126,15 +130,19 @@ Try not to implement more than one spec at a time!
 
 ### You don't have to pass in an entire 40x40 grid in your tests
 
-A test would be most effective passing in a 3x3 grid with neighbors constructed for the middle cell, and making assertions against only that middle cell.
+A test would be most effective passing in a 3x3 grid with neighbors constructed for the middle cell, and making assertions against only that middle cell. The 3x3 grid is the minimum size needed to include all 8 neighbors of the middle cell.
+
+You _can_ write tests using larger grids than this, but there's no significant value in doing so.
 
 ### Don't forget - each cell has up to 8 neighbors, not 4.
 
-Diagonals count!
+Diagonals count! Below you can see a green cell with all 8 of its neighbors in gray:
+
+![All 8 neighbors](./docs/all-8-neighbors.png)
 
 ### Start by writing specs that aren't going to ship.
 
-Instead of only surviving if it has N neighbors, have a cell survive if it has a neighbor to the left...
+Instead of only surviving if it has N neighbors, have a cell survive only if it has a neighbor to the left...
 
 Then if it has a neighbor to the right...
 
@@ -207,6 +215,6 @@ If your system supports the blinker, you've probably got all of your features im
 
 ## When are you complete?
 
-When the cells start to cluster, like this:
+When the cells start to cluster and make organic "living" shapes, like this:
 
 ![Game Of Life feature-complete](docs/complete.gif)
