@@ -26,19 +26,23 @@ When the test suite starts running, you should see a message that reads
 
 👉 Fix the bugs! First write a test that fails, but proves the bug. Then fix the bug, resulting in a passing test.
 
-#### 1. Error when no middle name is provided
+If you get stuck at any point, remember that the `module-4c/name-generator/__solutions` folder contains possible solutions.
+
+#### Bug #1: Error when no middle name is provided
 
 People who don't have middle names are getting an error. We don't want to exclude them!
 
 👉 Write a test for a person with no middle name, and make it pass.
 
-#### 2. Lower-case not supported
+`module-4c/name-generator/index.js` and its associated spec file would be a great place for these changes.
+
+#### Bug #2: Lower-case not supported
 
 People who don't use capital letters for their first name, middle name, last name, or birth month are not getting expected results.
 
 👉 Write more tests against the name-generator translators in the `module-4c/name-generator` folder, to make sure you are getting the correct names for lower case values provided for first name, middle name, last name, and birth month.
 
-#### 3. Full month-names are required
+#### Bug #3: Full month-names are required
 
 Someone tried calling our unicorn-name-generator api with 'Feb' instead of 'February', and didn't get "Wielder of".
 
@@ -46,17 +50,21 @@ We should probably support month abbreviations.
 
 👉 Write some tests that use abbreviations for month names, and make them pass.
 
+You'll want to make these changes in the `birth-month-translator.js`, and its associated spec file.
+
 We probably should also support lowercase month names/abbreviations, if we aren't already.
 
 👉 Write tests to support lowercase month abbreviations, and make them pass if they don't already.
 
-#### 4. Zeke gets the wrong name
+You'll want to make these changes in the `birth-month-translator.js`, and its associated spec file.
+
+#### Bug #4: Zeke gets the wrong name
 
 According to the table, a user named Zeke should get Dashing, but we got a report that he is getting Piercing instead.
 
 👉 Write a test against the first-name-translator for Zeke. Find & fix the bug, resulting in a passing test.
 
-#### 5. Alex Puccio gets the wrong name
+#### Bug #5: Alex Puccio gets the wrong name
 
 Alex Puccio calls to tell us she's getting the wrong name. We tell her that can't be possible, we even wrote a test specifically for her. You can find this test in `module-4c/name-generator/index.spec.js`.
 
