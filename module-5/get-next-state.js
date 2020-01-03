@@ -14,13 +14,16 @@ import _ from 'lodash';
 
 // This is the function you need to implement!
 export default function getNextState(currentState) {
-  // _.range(0, 40) gives an array of integers, from 0 to 39.
-  //  You probably don't need this. It's just here to make the first test pass.
-  return _.range(0, 40)
-    .map(() => dummyRow());
+  if (currentState === undefined) {
+    throw new Error('argument null');
+  }
+
+  const rows = currentState.length;
+  const columns = currentState[0].length;
+
+  return _.range(0, rows).map(() => dummyRow(columns));
 }
 
-function dummyRow() {
-  return _.range(0,40)
-    .map(() => _.random(0, 3) < 3 ? 0 : 1);
+function dummyRow(columns) {
+  return _.range(0, columns).map(() => (_.random(0, 3) < 3 ? 0 : 1));
 }

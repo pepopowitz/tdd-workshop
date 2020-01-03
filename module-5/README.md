@@ -30,31 +30,17 @@ Every cell in the grid can be in one of two states: alive or dead. The alive cel
 
 The game advances one tick at a time. Each tick takes about half a second. For every tick, each cell will determine its next state based on its 8 neighbors.
 
-👉 Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to randomly replace the previous state. You'll use TDD to remove the randomness!
+👉 Hit the "Start" button. You should see the green cells dance around, as "life" advances. Currently, the cells are configured to **randomly** replace the previous state. You'll use TDD to remove the randomness!
 
-👉 Hit the "Stop" button. The green cells should stop dancing. You may have to click more than once to make them stop.
+👉 Hit the "Stop" button. The green cells should stop dancing. You may have to click more than once to make them stop 😬.
 
 There's no actual reason you need to stop the game - the "Stop" button is there in case you get sick of watching the cells dance.
 
-## Ground Rules
-
-### 1. Don't write new code without writing a test first
-
-### 2. Take turns
-
-You'll be taking turns writing tests and making them pass, and working together to refactor along the way.
-
-### 3. Collaborate to define the test cases
-
-### 4. When you are typing, you decide the code that is written
-
-You may ask for the other’s opinion, but the other may not force you to write the code a certain way.
-
-## Let's Play!
+## Get Your Bearings
 
 👉 Take a look at the `module-5/get-next-state.spec.js` test file. This is where you'll be writing your tests for this exercise.
 
-Currently you'll see one test, named `it('returns a 40x40 grid'...)`. This test verifies that when you call getNextState, it returns a 40x40 grid.
+Currently you'll see two tests. One verifies that an exception is thrown if no grid is passed; the other verifies that the grid returned is the same size as the grid passed.
 
 A "grid" is represented as an array of arrays. Each child array is a "row" in the grid; each item in a child array is a "cell" in the grid.
 
@@ -68,13 +54,13 @@ For example, this is a representation of a 3x3 grid, where only the middle cell 
 ]
 ```
 
-Note that this example also shows all 8 neighbors of the middle cell.
+Note that this example also shows all 8 neighbors of the middle cell (they all have a value of 0).
 
 👉 Take a look at the `module-5/get-next-state.js` file. This is where you'll be implementing the specifications for this exercise.
 
-Currently you'll see that `getNextState` is returning 40 dummy rows. Each dummy row returns 40 randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly.
+Currently you'll see code that verifies the `currentState` is not null, and generates an appropriately sized grid of randomized cells. This is why, when you clicked "Start" in the app, you saw the cells shifting randomly.
 
-When the app is running, it will repeatedly pass the current 40x40 state to `getNextState`, and render the state returned. Your goal is to update `getNextState` so that it returns the correct 40x40 state.
+When the app is running, it will repeatedly pass the current 40x40 state to `getNextState`, and render the state returned. By the end of the exercise, you'll have updated `getNextState` so that it returns the correct next state.
 
 👉 Start up the test suite.
 
@@ -84,7 +70,23 @@ At this point, no tests should run, and you should see this message:
 
 `No tests found related to files changed since last commit.`
 
-## The workflow
+## Let's Write Some Tests!
+
+### The Ground Rules
+
+#### 1. Don't write new code without writing a test first
+
+#### 2. Take turns
+
+You'll be taking turns writing tests and making them pass, and working together to refactor along the way.
+
+#### 3. Collaborate to define the test cases
+
+#### 4. When you are typing, you decide the code that is written
+
+You may ask for the other’s opinion, but the other may not force you to write the code a certain way.
+
+### The Workflow
 
 Your collaboration workflow will look like this:
 
@@ -96,29 +98,46 @@ Your collaboration workflow will look like this:
 - Person 1&2: Refactor together
 - Repeat
 
-## Specifications
+### Write Your First Test
 
-It might help to read the [Suggestions](#suggestions) below before implementing the specifications.
+The full list of specifications is listed [at the end of the README](#appendix-full-specifications). Let's walk through the first specs together.
 
-#### 0. Begin with a random "seed" or starting sequence. For each "tick" of the game, return the next state based on the current state.
+The first specification reads:
 
-This is already done for you. You just need to implement specs 1-4, in `get-next-state.js`.
+> #### 0. Begin with a random "seed" or starting sequence. For each "tick" of the game, return the next state based on the current state.
 
-### For a space that is 'alive' (i.e. has a value of 1 in our implementation):
+This spec is already done for you. ✅
 
-#### 1. Each cell with one or no neighbors dies (becomes a 0), as if by solitude.
+The next spec reads:
 
-#### 2. Each cell with four or more neighbors dies (becomes a 0), as if by overpopulation.
+> ### For a space that is 'alive' (i.e. has a value of 1 in our implementation):
+>
+> #### 1. Each cell with one or no neighbors dies (becomes a 0), as if by solitude.
 
-#### 3. Each cell with two or three neighbors survives (remains a 1).
+I see a handful of problems involved in accomplishing this spec:
 
-### For a space that is 'dead' or 'empty' (i.e. has a value of 0):
+- We need to base a current cell's state on the state of its neighbors.
+- Each cell can have up to 8 neighbors, so we have to look at all 8 of them.
+- Corner or edge cells have less than 8 neighbors, so we have to make sure we don't "overflow".
+- We need to count how many of a cell's neighbors are alive.
 
-#### 4. Each cell with three neighbors becomes 'alive' (becomes a 1).
+That's a lot of tests we will need to write. Let's start with the first problem: "we need to base a current cell's state on the state of its neighbors."
+
+In fact, we can break that down even smaller: let's start with a test to base a current cell's state on the state of only its **left** neighbor. This is not going to produce the final shipped result, but it will get us one step closer.
+
+👉 Write a test in `get-next-state.spec.js` that passes a 3x3 grid and verifies that tiles in the grid become alive only if their leftmost neighbor is alive.
+
+You can see an example of this test in [`./__solutions/get-next-state.spec.js`](./__solutions/get-next-state.spec.js). (Note that it is commented out in that file.)
+
+## Your Assignment
+
+There's a lot more to implement. One next step might be to write a test that verifies that each cell depends on its left **or right** neighbor. You could iteratively build up to cover all neighbors, then count the number of alive neighbors.
+
+Finish implementing this spec, and all other remaining specs!
+
+This problem is hard. I don't expect you to finish. Even the first spec is difficult. Here are some suggestions that might help you along the way:
 
 ## Suggestions
-
-This problem is hard! I don't expect you to finish. Even the first spec is difficult. Here are some suggestions that might help you along the way.
 
 ### Keep all methods below 5 lines
 
@@ -128,12 +147,6 @@ Extract functions to make your code smaller & easier to understand.
 
 Try not to implement more than one spec at a time!
 
-### You don't have to pass in an entire 40x40 grid in your tests
-
-A test would be most effective passing in a 3x3 grid with neighbors constructed for the middle cell, and making assertions against only that middle cell. The 3x3 grid is the minimum size needed to include all 8 neighbors of the middle cell.
-
-You _can_ write tests using larger grids than this, but there's no significant value in doing so.
-
 ### Don't forget - each cell has up to 8 neighbors, not 4.
 
 Diagonals count! Below you can see a green cell with all 8 of its neighbors in gray:
@@ -142,15 +155,15 @@ Diagonals count! Below you can see a green cell with all 8 of its neighbors in g
 
 ### Start by writing specs that aren't going to ship.
 
-Instead of only surviving if it has N neighbors, have a cell survive only if it has a neighbor to the left...
+Instead of only surviving if it has N neighbors, have a cell survive only if it has a living neighbor to the left...
 
-Then if it has a neighbor to the right...
+Then if it has a living neighbor to the right...
 
-Then top, then down...
+Then above, then below...
 
-Then if it has more than one neighbor.
+Then if it has more than one living neighbor...
 
-None of these specifications are in the final solution, but they will help you build incremental code. They help prevent you having to make a leap to the final working solution, and point you in the right direction.
+None of these specifications are in the final solution, but they will help you build incremental code. This will help prevent you having to make a leap to the final working solution, and point you in the right direction.
 
 Eventually, though, you'll want to delete those incremental tests.
 
@@ -218,3 +231,19 @@ If your system supports the blinker, you've probably got all of your features im
 When the cells start to cluster and make organic "living" shapes, like this:
 
 ![Game Of Life feature-complete](docs/complete.gif)
+
+## Appendix: Full Specifications
+
+#### 0. Begin with a random "seed" or starting sequence. For each "tick" of the game, return the next state based on the current state.
+
+### For a space that is 'alive' (i.e. has a value of 1 in our implementation):
+
+#### 1. Each cell with one or no neighbors dies (becomes a 0), as if by solitude.
+
+#### 2. Each cell with four or more neighbors dies (becomes a 0), as if by overpopulation.
+
+#### 3. Each cell with two or three neighbors survives (remains a 1).
+
+### For a space that is 'dead' or 'empty' (i.e. has a value of 0):
+
+#### 4. Each cell with three neighbors becomes 'alive' (becomes a 1).

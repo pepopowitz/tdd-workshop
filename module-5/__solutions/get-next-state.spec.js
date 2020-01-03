@@ -10,7 +10,11 @@ describe('module-5/get-next-state', () => {
   });
 
   it('returns a grid of the same size', () => {
-    const initialState = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
+    const initialState = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ];
 
     const result = getNextState(initialState);
 
@@ -88,16 +92,28 @@ describe('module-5/get-next-state', () => {
 
   // Any live cell with fewer than two live neighbours dies
   it('dies if it is alive and has fewer than two neighbors', () => {
-    const initialState = [[1, 0, 0], [0, 0, 0], [0, 0, 1]];
+    const initialState = [
+      [1, 0, 0],
+      [0, 0, 0],
+      [0, 0, 1],
+    ];
 
     const result = getNextState(initialState);
 
-    expect(result).toEqual([[0, 0, 0], [0, 0, 0], [0, 0, 0]]);
+    expect(result).toEqual([
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
+    ]);
   });
 
   // Any live cell with more than three live neighbours dies
   it('dies if it is alive and has more than three neighbors', () => {
-    const initialState = [[0, 1, 0], [1, 1, 1], [0, 1, 0]];
+    const initialState = [
+      [0, 1, 0],
+      [1, 1, 1],
+      [0, 1, 0],
+    ];
 
     const result = getNextState(initialState);
 
@@ -106,7 +122,11 @@ describe('module-5/get-next-state', () => {
 
   // Any live cell with two live neighbours lives
   it('lives if it is alive and has two neighbors', () => {
-    const initialState = [[1, 0, 0], [1, 1, 0], [0, 0, 0]];
+    const initialState = [
+      [1, 0, 0],
+      [1, 1, 0],
+      [0, 0, 0],
+    ];
 
     const result = getNextState(initialState);
 
@@ -115,7 +135,11 @@ describe('module-5/get-next-state', () => {
 
   // Any live cell with three live neighbours lives
   it('lives if it is alive and has three neighbors', () => {
-    const initialState = [[0, 1, 0], [1, 1, 1], [0, 0, 0]];
+    const initialState = [
+      [0, 1, 0],
+      [1, 1, 1],
+      [0, 0, 0],
+    ];
 
     const result = getNextState(initialState);
 
@@ -124,7 +148,11 @@ describe('module-5/get-next-state', () => {
 
   // Any dead cell with exactly three live neighbours will come to life.
   it('regenerates if it is dead and has three live neighbors', () => {
-    const initialState = [[0, 1, 0], [1, 0, 1], [0, 0, 0]];
+    const initialState = [
+      [0, 1, 0],
+      [1, 0, 1],
+      [0, 0, 0],
+    ];
 
     const result = getNextState(initialState);
 
@@ -132,7 +160,11 @@ describe('module-5/get-next-state', () => {
   });
 
   it('doesn`t regenerate if it is dead and has two live neighbors', () => {
-    const initialState = [[0, 0, 0], [0, 0, 1], [0, 1, 0]];
+    const initialState = [
+      [0, 0, 0],
+      [0, 0, 1],
+      [0, 1, 0],
+    ];
 
     const result = getNextState(initialState);
 
@@ -140,7 +172,11 @@ describe('module-5/get-next-state', () => {
   });
 
   it('doesn`t regenerate if it is dead and has four live neighbors', () => {
-    const initialState = [[0, 1, 0], [1, 0, 1], [0, 1, 0]];
+    const initialState = [
+      [0, 1, 0],
+      [1, 0, 1],
+      [0, 1, 0],
+    ];
 
     const result = getNextState(initialState);
 
@@ -148,10 +184,18 @@ describe('module-5/get-next-state', () => {
   });
 
   it('supports blinker', () => {
-    const initialState = [[0, 1, 0], [0, 1, 0], [0, 1, 0]];
+    const initialState = [
+      [0, 1, 0],
+      [0, 1, 0],
+      [0, 1, 0],
+    ];
 
     const result = getNextState(initialState);
 
-    expect(result).toEqual([[0, 0, 0], [1, 1, 1], [0, 0, 0]]);
+    expect(result).toEqual([
+      [0, 0, 0],
+      [1, 1, 1],
+      [0, 0, 0],
+    ]);
   });
 });
