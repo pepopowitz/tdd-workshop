@@ -4,7 +4,7 @@
 
 This module allows you to explore the Jest watch-mode. It will help you get comfortable running tests in this workshop.
 
-The code under test is a "✨JavaScript Unicorn 🦄 Name Generator ✨". The rules for generating names can be seen in [the table at the end of this README](#generation-rules).
+The code under test is a "✨JavaScript Unicorn 🦄 Name Generator ✨". The rules for generating names can be seen in [the table at the end of this README](#appendix-generation-rules).
 
 ## Start up the tests
 
@@ -34,7 +34,7 @@ Jest offers you several options by which to filter your tests:
 - `t`: Run tests filtered by a test name regex pattern. This is useful when you want to run all tests related to a specific feature.
 - `o`: Run only tests that are affected by local changes since your last commit. This is the default when you start up Jest.
 
-**Note**: Test filters are generally combined. If you type `f` to filter by failing tests, and then `p` to filter by a filename, you will usually end up filtering by both. Jest will usually tell you how to clear out any existing filters. Sometimes it's `c` to clear existing filters, sometimes it's the same key you pressed to get into your current filter, sometimes you just have to hit `o` to get back to running only tests affected by local changes.
+> **Note**: Test filters are generally combined. If you type `f` to filter by failing tests, and then `p` to filter by a filename, you will filter by both. Jest will always tell you how to clear out any existing filters, but be warned that the key to clear filters sometimes varies. Sometimes it's `c` to clear existing filters, sometimes it's the same key you pressed to get into your current filter, sometimes you just have to hit `o` to get back to running only tests affected by local changes.
 
 ## Let's try a few filters out!
 
@@ -84,7 +84,11 @@ const result = generateName({
 
 👉 Change some of the arguments in this call, and save the file.
 
-You should see an error message in your test watch window. Mine looks like this:
+You should see an error message in your test watch window.
+
+> **Note**: If you changed some arguments but the test didn't break, you might have used a name with the same initial as the original. Due to the very "complicated" logic of the name generator, this would cause the test to continue passing. 😬
+
+My test failure looks like this:
 
 ![Failed Jest test](./docs/friendly-error.png)
 
@@ -104,7 +108,7 @@ We want to make sure we have passing tests before moving on. You can revert your
 
 ## Let's make some changes!
 
-Take a look at the [name generation table](#generation-rules) at the end of this doc. The code is implemented for these rules, but it lacks tests!
+Take a look at the [name generation table](#appendix-generation-rules) at the end of this doc. The code is implemented for these rules, but it lacks tests!
 
 👉 Add tests for translation of your first name, middle name, last name, birth month, and birth date according to these rules.
 
@@ -130,7 +134,7 @@ If you get stuck on this test, look at the existing tests to see if they're diff
 
 - If you get stuck on a test, use `console.log` to output values to help you identify the problem. You can use `console.log` from your test code, or from the function being tested, and it will show up in your Jest output.
 
-## Generation Rules
+## Appendix: Generation Rules
 
 This table lists the rules for generating a JavaScript unicorn name.
 

@@ -24,7 +24,7 @@ When the test suite starts running, you should see a message that reads
 
 ### Bugs
 
-👉 Fix the bugs! First write a test that fails, but proves the bug. Then fix the bug, resulting in a passing test.
+👉 Fix the bugs listed below! For each one, first write a test that fails but proves the bug exists. Then fix the bug, resulting in a passing test.
 
 If you get stuck at any point, remember that the `module-4c/name-generator/__solutions` folder contains possible solutions.
 
@@ -44,7 +44,7 @@ People who don't use capital letters for their first name, middle name, last nam
 
 #### Bug #3: Full month-names are required
 
-Someone tried calling our unicorn-name-generator api with 'Feb' instead of 'February', and didn't get "Wielder of".
+Someone tried calling our unicorn-name-generator API with 'Feb' instead of 'February', and didn't get "Wielder of".
 
 We should probably support month abbreviations.
 
@@ -68,7 +68,7 @@ According to the table, a user named Zeke should get Dashing, but we got a repor
 
 Alex Puccio calls to tell us she's getting the wrong name. We tell her that can't be possible, we even wrote a test specifically for her. You can find this test in `module-4c/name-generator/index.spec.js`.
 
-Look again [at the generation rule table](#generation-rules). We're generating the wrong name for her.
+Look again [at the generation rule table](#appendix-generation-rules). We're generating the wrong name for her.
 
 👉 Correct the name in the test. This will result in a failing test.
 
@@ -76,7 +76,7 @@ Look again [at the generation rule table](#generation-rules). We're generating t
 
 Tests aren't infallible. Sometimes we get them wrong, and in doing so, we miss bugs. Test-Driven Development can't help you escape bugs, but it can help you document requirements exactly as you understand them.
 
-### Generation Rules
+### Appendix: Generation Rules
 
 This table lists the rules for generating a JavaScript unicorn name.
 

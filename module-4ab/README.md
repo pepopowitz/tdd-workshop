@@ -10,7 +10,7 @@ Real-life problems aren't always easy to test. This submodule will teach you how
 
 The app we're testing in this module is a "trail finder". We have a search form with which the user can filter the results, and a button that retrieves trails based on the filters.
 
-The web app (located in the folder `module-4ab/app`) makes calls to an API(`module-4ab/api`). The API returns results filtered from a hardcoded data-set (`module-4ab/api/trail-data.js`).
+The web app (located in the folder `module-4ab/app`) makes calls to an API (`module-4ab/api`). The API returns results filtered from a hardcoded data-set (`module-4ab/api/trail-data.js`).
 
 Trails have a name, sport, hill difficulty, and distance associated with them. Users will be able to filter by sport, hill difficulty, and distance.
 
@@ -50,11 +50,11 @@ Notice that there are no results on the page, but also no indication that it did
 
 👉 Implement a feature, using TDD, such that an empty search shows a message that reads "No results found".
 
-**Hint**: You'll implement this logic in the `module-4ab/app/search-form/render-successful-output.js` file.
+> **Hint**: You'll implement this logic in the `module-4ab/app/search-form/render-successful-output.js` file.
 
-**Hint**: You'll write your tests in the `module-4ab/app/search-form/render-successful-output.spec.js` file. The existing test named `it('renders a list if there are results')` is a good example to look at.
+> **Hint**: You'll write your tests in the `module-4ab/app/search-form/render-successful-output.spec.js` file. The existing test named `it('renders a list if there are results')` is a good example to look at. You'll want to add a test to verify what happens when there are no results.
 
-**Hint**: Everything you need to implement this feature can already be found in the renderSuccessfulOutput function & tests. You might also find the renderErroneousOutput function & tests useful.
+> **Hint**: Everything you need to implement this feature can already be found in the renderSuccessfulOutput function & tests. You might also find the renderErroneousOutput function & tests useful.
 
 If you get stuck on this feature, see [`./__solutions/app/search-form/render-successful-output.js`](./__solutions/app/search-form/render-successful-output.js) and [`./__solutions/app/search-form/render-successful-output.spec.js`](./__solutions/app/search-form/render-successful-output.spec.js) for a possible solution.
 
@@ -100,12 +100,12 @@ Depending on the value, the range of results will vary.
 - If the distance is more than 10 but less than 20, it should return trails within 2 miles of the value passed in. For example, if the value passed in is 15, we should see results from 13 to 17 miles long.
 - If the distance is more than 20, it should return trails within 3 miles of the value passed in. For example, if the value passed in is 24, we should see results from 21 - 27 miles long.
 
-**Hint**: You'll implement this feature in the `/module-4ab/api/trails/controller.js` file.
+> **Hint**: You'll implement this feature in the `/module-4ab/api/trails/controller.js` file.
 
-**Hint**: You'll implement tests for this feature in the `/module-4ab/api/trails/controller.spec.js` file.
+> **Hint**: You'll implement tests for this feature in the `/module-4ab/api/trails/controller.spec.js` file.
 
-**Hint**: The existing features that filter by sport or hills are a good example to look at for this work.
+> **Hint**: The existing features that filter by sport or hills are a good example to look at for this work.
 
-**Hint**: Once you've written tests and implemented this, you can verify the behavior in the app by entering a distance and filtering.
+> **Hint**: Once you've written tests and implemented this, you can verify the behavior in the app by entering a distance and filtering.
 
 If you get stuck on this feature, see [`./__solutions/api/trails/controller.js`](./__solutions/api/trails/controller.js) and [`./__solutions/api/trails/controller.spec.js`](./__solutions/api/trails/controller.spec.js) for a possible solution.

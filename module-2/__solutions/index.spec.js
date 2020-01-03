@@ -45,7 +45,7 @@ describe('fizzBuzz', () => {
   //   expect(result).toEqual('1 2 Fizz 4 5 Fizz 7 8 Fizz 10 11 Fizz 13 14 Fizz');
   // })
 
-  it('returns the correct string when input=15', () => {
+  it('returns the correct string when input=14', () => {
     const result = fizzBuzz(14);
 
     expect(result).toEqual('1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14');

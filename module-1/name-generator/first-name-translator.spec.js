@@ -11,5 +11,5 @@ describe('module-1/name-generator/first-name-translator', () => {
     const result = translateFirstName('Lila');
 
     expect(result).toEqual('Dancing');
-  })
+  });
 });

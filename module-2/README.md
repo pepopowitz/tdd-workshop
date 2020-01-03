@@ -2,10 +2,6 @@
 
 This module will show you what TDD looks like in practice. The instructor will lead the group through a demonstration of TDD. Follow along!
 
-## Why is this module here, then?
-
-If you don't want to follow along with the group, feel free to build out FizzBuzz on your own, using TDD.
-
 ## Rules
 
 ### How to play
