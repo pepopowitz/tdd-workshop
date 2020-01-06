@@ -77,3 +77,10 @@ If you still can't figure out why things aren't working, raise your hand, or cre
 ## Notes
 
 Notes about how this repository was created are collected [here](./META.md).
+
+## Resources
+
+Some links that might come in handy during this workshop:
+
+- [Jest docs](https://jestjs.io/)
+- [List of Jest matchers](https://jestjs.io/docs/en/expect)
