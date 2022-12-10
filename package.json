@@ -63,7 +63,7 @@
     "@babel/runtime": "^7.7.6",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "form-serialize": "^0.7.2",
     "lodash": "^4.17.15"
   }
